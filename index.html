@@ -4,14 +4,94 @@
     <meta charset="utf-8" />
     <title>Cheo Roman Portfolio</title>
     <link rel="stylesheet" href="./styles/main.css" />
+    <!-- <script src="https://kit.fontawesome.com/0c3a5f1ab4.js" crossorigin="anonymous"></script> -->
   </head>
 
   <body>
-    <main id="container">
-        <header class="">
-            <img src="" alt="">
-        </header>
+    <header class="header">
+        <div class="img__container">
+            <img src="./images/self.png" alt="">
+        </div>
+        <h1>let's build great products together</h1>
+    </header>
+    <main class="main">
+        <section class="main__content">
+            <p>
+                I have been programming as a hobby on/off for years. I started with C++ in highschool and Prolog in college for a
+computational linguistics course where we drove robotic cars using our voice.
+            </p>
+            <p>
+                Due to health reasons after graduating,
+                could no longer do Peace Corp on medical grounds, so I continued learning at a local community college and state school.
+                Doing so taught me to plan, build, and automate tools to ease my workload in the transportation/logistics/freight
+                shipping industries.
+            </p>
+            <p>
+                It was not until I was laid off that I decided to return from my 2 year programming hiatus and enrolled at the Nashville
+Software School. NSS has helped me get over my impostor’s syndrome and I look forward to collaborating with you on
+future endeavors.
+            </p>
+        </section>
+        <h2>projects</h2>
+        <ul class="gallery">
+            <li id="project--1" class="gallery__project"><a class="gallery__project--link" href="https://github.com/CheoR/pack-it-up"           target='_blank'>PackItUp        </a></li>
+            <li id="project--2" class="gallery__project"><a class="gallery__project--link" href="https://github.com/CheoR/BeerMe"               target='_blank'>BeerMe          </a></li>
+            <li id="project--3" class="gallery__project"><a class="gallery__project--link" href="https://github.com/CheoR/recommend_wine"       target='_blank'>Wine Recommender</a></li>
+            <li id="project--4" class="gallery__project"><a class="gallery__project--link" href="https://github.com/CheoR/FreeCodeCampProjects" target='_blank'>FCC Projects    </a></li>
+            <li id="project--5" class="gallery__project"><a class="gallery__project--link" href="https://codepen.io/CheoR/full/QzPJbQ"          target='_blank'>CodePen         </a></li>
+            <li id="project--6" class="gallery__project"><a class="gallery__project--link" href="#"                                             target='_blank'>Resume          </a></li>
+        </ul>
+        <h2>get in touch</h2>
+        <form class="main__form" action="">
+            <fieldset class="main__form__fieldset">
+                <label for="inputName">name</label>
+                <input id="inputName" type="text">
+                <label for="inputEmail">email</label>
+                <input type="email">
+                <label for="inputMsg">message</label>
+                <textarea name="inputMsg" id="inputMsg" cols="30" rows="10"></textarea>
+            </fieldset>
+            <input class="submit" type="submit" value="submit" />
+        </form>
     </main>
+    <footer class="info">
+        <section class="info__section">
+            <h2>technology</h2>
+            <ul class="technologies">
+                <!-- FRONT END -->
+                <li class="technology__item"><img src="./images/icons/react.png"      alt="react icon"      class="technology__img"></li>
+                <li class="technology__item"><img src="./images/icons/chrome-dev.png" alt="chrome dev icon" class="technology__img"></li>
+                <li class="technology__item"><img src="./images/icons/bootstrap.png"  alt="bootstrap icon"  class="technology__img"></li>
+                <li class="technology__item"><img src="./images/icons/sass.png"       alt="sass icon"       class="technology__img"></li>
+                <li class="technology__item"><img src="./images/icons/css.png"        alt="css icon"        class="technology__img"></li>
+                <li class="technology__item"><img src="./images/icons/html5.svg"      alt="html5 icon"      class="technology__img"></li>
+                <!-- BACK END -->
+                <li class="technology__item"><img src="./images/icons/django.svg"     alt="django icon"     class="technology__img"></li>
+                <li class="technology__item"><img src="./images/icons/node.png"       alt="node icon"       class="technology__img"></li>
+                <li class="technology__item"><img src="./images/icons/npm.png"        alt="npm icon"        class="technology__img"></li>
+                <!-- OTHER -->
+                <li class="technology__item"><img src="./images/icons/python.png"     alt="python icon"     class="technology__img"></li>
+                <li class="technology__item"><img src="./images/icons/javascript.png" alt="javascript icon" class="technology__img"></li>
+                <li class="technology__item"><img src="./images/icons/git.png"        alt="git icon"        class="technology__img"></li>
+                <li class="technology__item"><img src="./images/icons/github.png"     alt="github icon"     class="technology__img"></li>
+                <li class="technology__item"><img src="./images/icons/SQLite.png"     alt="SQLite icon"     class="technology__img"></li>
+                <li class="technology__item"><img src="./images/icons/vscode.png"     alt="vscode icon"     class="technology__img"></li>
+            </ul>
+        </section>
+        <section class="info__section">
+            <h2>follow</h2>
+            <ul class="socials">
+                <!-- <a href="#" target='_blank'><i class="fa fa-facebook-square fa-5x" aria-hidden="true"></i></a> -->
+                <li class="socials__item"><a class="socials__item--link" href="https://www.linkedin.com/in/cheo-roman/" target='_blank'><i class="fa fa-linkedin-square fa-1x" aria-hidden="true"></i></a></li>
+                <li class="socials__item"><a class="socials__item--link" href="https://github.com/CheoR"                target='_blank'><i class="fa fa-github-square   fa-1x" aria-hidden="true"></i></a></li>
+                <li class="socials__item"><a class="socials__item--link" href="http://codepen.io/CheoR/"                target='_blank'><i class="fa fa-free-code-camp  fa-1x" aria-hidden="true"></i></a></li>
+            </ul>
+        </section>
+        <section class="info__section">
+            <p class="info__copy">&copy; CheoR 2021</p>
+        </section>
+    </footer>
     <script type="module" src="./scripts/main.js"></script>
+    <script src="https://use.fontawesome.com/d8cfc80d37.js"></script>
   </body>
 </html>
