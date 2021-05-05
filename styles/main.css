@@ -49,6 +49,7 @@ p {
 input,
 textarea {
   font-size: 2rem;
+  width: 100%;
 }
 
 html,
