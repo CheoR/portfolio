@@ -2,6 +2,4 @@
 
 Welcome to my portofilo readme.
 
-View site here:
-
-
+View site here: [portfolio](https://cheor.github.io/)
