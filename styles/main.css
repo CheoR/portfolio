@@ -155,119 +155,56 @@ h2 {
   text-align: center;
 }
 
-/*
-
-
-
-
- @media only screen and (min-device-width: 540px) and (max-device-width: 720px) {
-}
-
-@media only screen and (min-device-width: 720px) {
-}
-
-
-h1,
-p {
-  margin-bottom: 1.5rem;
-}
-
-
-.header {
-  display: flex;
-  flex-direction: column;
-}
-
-h1 {
-  display: block;
-  padding: 2rem;
-  text-align: center;
-  font-size: 5rem;
-}
-
-
-.main__form {
-  font-size: 3rem;
-}
-
-.main__form input {
-  font-size: 3rem;
-}
-
-}
-
-.main__form__fieldset {
-  display: flex;
-  flex-direction: column;
-}
-
-.main__form__fieldset label {
-  font-size: 4rem;
-}
-
-input {
-  border-bottom: 0.5rem solid black;
-}
-
-.info h2,
-.info p,
-.main h2 {
-  text-align: center;
-}
-
-.font_awesome {
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 3rem;
-}
-
-@media only screen and (min-device-width: 540px) and (max-device-width: 720px) {
+@media only screen and (min-device-width: 540px) {
   .header {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  .img__container {
-    width: 20%;
-  }
-
-  h2 {
-    font-size: 3rem;
-  }
-
-  .font_awesome {
+  h1 {
     display: block;
-    width: 50%;
-    height: 50%;
+    text-align: center;
     padding: 2rem;
+    margin: 0 auto;
+    border-bottom: 2px solid black;
   }
 
+  .info {
+    display: grid;
+    grid-template-rows: auto auto 10%;
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .info__section:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .info__section:nth-child(2) {
+    grid-column-start: 6;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .info__section:nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
 }
 
 @media only screen and (min-device-width: 720px) {
-  .header {
-    display: flex;
-    flex-direction: row;
-  }
-
-
   .main__form {
-    width: 50%;
-    font-size: 3rem;
-  }
-
-  .main__form input {
-    font-size: 2rem;
+    width: 40%;
+    margin: 0 auto;
   }
 
   .submit {
-    font-size: 2rem;
     padding: 1rem;
   }
-
-  .main__form__fieldset label {
-    font-size: 2rem;
-  }
-
-} */
+}
