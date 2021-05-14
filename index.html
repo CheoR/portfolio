@@ -114,14 +114,20 @@
         </li>
       </ul>
       <h2>get in touch</h2>
-      <form class="main__form" action="">
+      <form class="main__form" id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mzbyerkv" method="POST">
         <fieldset class="main__form__fieldset">
           <label for="inputName">name</label>
           <input name="inputName" id="inputName" type="text" />
-          <label for="inputEmail">email</label>
-          <input name="inputEmail" id="inputEmail" type="email" />
+          <!-- <label for="inputEmail">email</label>
+          <input name="inputEmail" id="inputEmail" type="email" /> -->
+          <label for="inputeEmail">
+            email
+            <input id="inputeEmail" type="email" name="_replyto">
+          </label>
           <label for="inputMsg">message</label>
-          <textarea name="inputMsg" id="inputMsg"></textarea>
+          <textarea name="inputMsg" id="inputMsg" required=""></textarea>
+          <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+          <input type="text" name="_gotcha" class="moocow" />
         </fieldset>
         <input class="submit" type="submit" value="Send" />
       </form>

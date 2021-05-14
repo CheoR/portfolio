@@ -19,6 +19,10 @@ code {
     monospace;
 }
 
+.moocow {
+  display: none;
+}
+
 h1,
 h2,
 h3,
