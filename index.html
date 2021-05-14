@@ -2,11 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="cheo roman personal portfolio"
-      content="cheo roman personal portfolio"
-      description="cheo roman personal portfolio"
-    />
+    <meta name="description" content="cheo roman personal portfolio" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- for linkedin -->
@@ -117,19 +114,20 @@
         </li>
       </ul>
       <h2>get in touch</h2>
-      <form class="main__form" action="">
+      <form class="main__form" id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mzbyerkv" method="POST">
         <fieldset class="main__form__fieldset">
           <label for="inputName">name</label>
           <input name="inputName" id="inputName" type="text" />
-          <label for="inputEmail">email</label>
-          <input name="inputEmail" id="inputEmail" type="email" />
+          <!-- <label for="inputEmail">email</label>
+          <input name="inputEmail" id="inputEmail" type="email" /> -->
+          <label for="inputeEmail">
+            email
+            <input id="inputeEmail" type="email" name="_replyto">
+          </label>
           <label for="inputMsg">message</label>
-          <textarea
-            name="inputMsg"
-            id="inputMsg"
-            cols="30"
-            rows="10"
-          ></textarea>
+          <textarea name="inputMsg" id="inputMsg" required=""></textarea>
+          <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+          <input type="text" name="_gotcha" class="moocow" />
         </fieldset>
         <input class="submit" type="submit" value="Send" />
       </form>
