@@ -1,0 +1,223 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+html,
+body {
+  min-height: 100%;
+  font-size: 16px;
+}
+
+body {
+  height: 100%;
+}
+
+img {
+  display: block;
+}
+
+.banner {
+  width: 100%;
+}
+
+.banner__img {
+  width: 100%;
+  padding-top: 10px;
+}
+
+.bottom_panel {
+  padding: 1rem;
+}
+
+select[name="dropdown"],
+.banner,
+.bottom_panel p {
+  background: rgb(249, 159, 1);
+  background: linear-gradient(
+    90deg,
+    rgba(249, 159, 1, 1) 0%,
+    rgba(244, 202, 18, 1) 100%
+  );
+}
+
+.middle_panel {
+  padding: 1rem;
+}
+
+.middle_panel h2 {
+  text-align: center;
+}
+
+.middle_panel__services {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card span {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.bottom_panel p {
+  padding: 1rem;
+}
+
+.bottom_panel__img_container {
+  width: 100%;
+}
+
+.bottom_panel__img {
+  width: 100%;
+}
+
+.legal {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  font-size: 0.5rem;
+}
+
+.legal__logos {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+
+  /* .banner__card_info {
+    border: 2px solid red;
+    width: 50%;
+  } */
+
+  .middle_panel__services {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
+  .card img {
+    align-self: center;
+    width: 25%;
+  }
+
+  .middle_panel,
+  .protection {
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .middle_panel h2,
+  .protection h2 {
+    font-size: 2rem;
+  }
+
+  .bottom_panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+  }
+
+  .bottom_panel > * {
+    width: 50%;
+  }
+
+  .bottom_panel p {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.legal p {
+  font-size: .8rem;
+}
+/*
+
+FILE INFO
+  Page: 1300 x 1870
+  Columns:
+   250/1300 ~ 19%
+   650/1300 ~ 50%
+   1047/1300 ~ %81
+  Rows:
+   465/1870 ~ 25%
+   605/1870 ~ 32%
+   805/1870 ~ 43%
+
+   890/1870 ~ 48%
+   935/1870 ~ 50%
+   970/1870 ~ 52%
+
+   1010/1870 ~ 54%
+   1105/1870 ~ 59%
+   1740/1870 ~ 95%
+
+
+  xs, extra-small: 0px
+  sm, small: 600px
+  md, medium: 960px
+  lg, large: 1280px
+  xl, extra-large: 1920px
+
+  54px = 3.375rem
+  40px = 2.5rem
+  32px = 2rem
+  30px = 1.875rem
+  28px = 1.75rem
+  22px = 1.375rem
+  20px = 1.25rem
+  16px = 1rem
+
+
+
+  MyriadPro-Lig - heavy weight
+    3.375rem;
+    54px - Safe way to pay online.
+    54px - For just about everything.
+  MyriadPro-Lig - light weight
+    2rem;
+    32px - Your FirstBank Visa Debit Card.
+  MyriadPro-Sem - light weight
+    1.75rem
+    28px - See details
+  MyriadPro-Lig - light weight
+    2rem
+    32px - Cell phone bills
+    1.25rem
+    20px - Take care of your monthly
+payments online, with ease
+    2.5rem
+    40px - For all your online spending today, rely on Visa Debit.
+    1.375rem
+    22px - It’s simple and safe to use your
+    2.5rem
+    40px - No worries – your purchases are 
+    1.375rem
+    22px - Peace of mind is built right in with Visa
+    1.875rem
+    30px - When it’s time to make an
+    1rem
+    16px - * Visa’s Zero Liability Policy does not apply to certain commercial card and anonymous prepaid card transactions or transactions not processed by Visa. Cardholders must use care in
+*/
