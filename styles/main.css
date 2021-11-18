@@ -89,6 +89,10 @@ img {
   width: 100%;
 }
 
+.image {
+  width: 50%;
+}
+
 .main__content {
   padding: 1rem;
 }
