@@ -23,7 +23,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background: lightgray;
+  background: #dad;
   font-size: 16px;
   font-display: swap;
   height: 100%;
