@@ -23,7 +23,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background: #dad;
+  background: #afd;
   font-size: 16px;
   font-display: swap;
   height: 100%;
@@ -168,13 +168,13 @@ textarea {
 */
 
 @media only screen and (min-device-width: 600px) {
-	body {
+	/* body {
 		background: red;
-	}
+	} */
 
 	h1 {
 		text-align: center;
-		background: blue;
+		/* background: blue; */
 		display: flex;
 		align-items: center;
 		padding: 1rem;
@@ -197,6 +197,10 @@ textarea {
 	
 	.socials {
 		justify-content: center;
+	}
+	
+	.socials__item {
+		padding: 1rem;
 	}
 }
 
