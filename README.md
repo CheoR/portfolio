@@ -13,11 +13,11 @@ Desktop wireframe as of now.
 ![Wireframe-Desktop](https://raw.githubusercontent.com/CheoR/portfolio/3198e1d8a2c0bb506466fd05f8536a40abebcec5/assets/images/wireframe_desktop.png)
 -->
 
-<p align="center">
+<center>
 <img
 	src="./assets/images/wireframe_desktop.png"
 	alt="Desktop wireframe"
 	style="margin: 0 auto; width: 50%"
 />
-</p>
+</center>
 
