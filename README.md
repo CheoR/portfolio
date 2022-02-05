@@ -14,9 +14,9 @@ Desktop wireframe as of now.
 -->
 
 <div style="display: block; background: lightblue; width: 100%">
-	<img
-		src="./assets/images/wireframe_desktop.png"
-		alt="Desktop wireframe"
-		style="margin: 0 auto; width: 50%"
-	/>
+<img
+	src="./assets/images/wireframe_desktop.png"
+	alt="Desktop wireframe"
+	style="margin: 0 auto; width: 50%"
+/>
 </div>
