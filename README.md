@@ -8,7 +8,9 @@ I'm a Nashville-based developer transitioning from a combined decade in the tran
 
 I'm planning redoing my portfolio with Gatsby.
 
-Desktop wireframe as of now.
+# Wireframes
+
+Desktop
 <!--
 ![Wireframe-Desktop](https://raw.githubusercontent.com/CheoR/portfolio/3198e1d8a2c0bb506466fd05f8536a40abebcec5/assets/images/wireframe_desktop.png)
 -->
@@ -17,6 +19,17 @@ Desktop wireframe as of now.
 <img
 	src="./assets/images/wireframe_desktop.png"
 	alt="Desktop wireframe"
+	style="margin: 0 auto; width: 50%"
+/>
+</p>
+
+
+Tablet - landscape
+
+<p align="center" width="100%">
+<img
+	src="./assets/images/wireframe_tablet_landscape.png"
+	alt="Tablet landscape mode wireframe"
 	style="margin: 0 auto; width: 50%"
 />
 </p>
