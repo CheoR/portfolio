@@ -1,6 +1,7 @@
 module.exports = {
+  pathPrefix: "/portfolio",
   siteMetadata: {
-    title: `portfolio`,
+    title: `Cheo Roman Portfolio`,
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [],

@@ -2,13 +2,25 @@
   "name": "portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "portfolio",
+  "description": "Personal Portfolio redone with Gatsby",
   "author": "CheoR",
+    "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CheoR/portfolio.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CheoR/portfolio.git/issues"
+  },
+  "homepage": "https://github.com/CheoR/portfolio.git#readme",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "personal",
+    "portfolio"
   ],
   "scripts": {
     "develop": "gatsby develop",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
@@ -18,5 +30,8 @@
     "gatsby": "^4.19.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
