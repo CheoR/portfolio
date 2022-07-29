@@ -31,6 +31,7 @@ import imgVSCode from "../../../assets/images/icons/icons8-vscode.svg";
 import imgWebpack from "../../../assets/images/icons/icons8-webpack.svg";
 
 import "./styles/main.css";
+import { Link } from "gatsby";
 
 const Index = () => {
   return (
@@ -522,6 +523,9 @@ const Index = () => {
             <a href="#home" aria-label="Back To Top">
               Back To Top
             </a>
+          </p>
+          <p>
+            <Link to="/">Home</Link>
           </p>
         </section>
       </footer>

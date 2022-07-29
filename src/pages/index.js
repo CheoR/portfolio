@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import * as React from "react";
 
 const pageStyles = {
@@ -35,7 +36,7 @@ const linkStyle = {
 const links = [
   {
     text: "Portfolio V1 Here",
-    url: "https://cheor.github.io/portfolio/v1/",
+    url: "/v1", // https://cheor.github.io/portfolio/v1/",
     description: "Click here to view Simple Portfolio V1 Responsive html, css",
     color: "#663399",
   },
@@ -52,9 +53,9 @@ const IndexPage = () => {
         {links.map((link) => (
           <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
             <span>
-              <a style={linkStyle} href={link.url}>
+              <Link to={link.url} style={linkStyle}>
                 {link.description}
-              </a>
+              </Link>
             </span>
           </li>
         ))}
