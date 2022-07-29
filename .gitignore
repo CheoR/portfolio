@@ -195,7 +195,8 @@ yarn-debug.log*
 yarn-error.log*
 /staticfiles
 local.py
-notes_*.rst
+project_notes.rst
+project_notes.md
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -301,5 +302,8 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# gatsby
+public
 
 
