@@ -1,4 +1,35 @@
 import React from "react";
+
+import imgSelf from "../../../assets/images/self.png";
+import resume from "../../..//assets/pdf/Cheo_Roman_Resume.pdf";
+import imgDjango from "../../../assets/images/icons/django.svg";
+import imgHtml5 from "../../../assets/images/icons/icons8-html-5.svg";
+import imgSQLite from "../../../assets/images/icons/sqLite.svg";
+import imgBabel from "../../../assets/images/icons/icons8-babel.svg";
+// import imgBlogger from "../../../assets/images/icons/icons8-blogger.svg";
+import imgBootstrap from "../../../assets/images/icons/icons8-bootstrap.svg";
+import imgChromeDev from "../../../assets/images/icons/icons8-chrome-dev.svg";
+// import imgChrome from "../../../assets/images/icons/icons8-chrome.svg";
+import imgCSS from "../../../assets/images/icons/icons8-css3.svg";
+import imgFigma from "../../../assets/images/icons/icons8-figma.svg";
+// import imgblogger from "../../../assets/images/icons/icons8-blogger.svg";
+import imgGit from "../../../assets/images/icons/icons8-git.svg";
+import imgGitHub from "../../../assets/images/icons/icons8-github.svg";
+import imgGQL from "../../../assets/images/icons/icons8-graphql.svg";
+import imgHeroku from "../../../assets/images/icons/icons8-heroku.svg";
+import imgJS from "../../../assets/images/icons/icons8-javascript.svg";
+import imgMongoDB from "../../../assets/images/icons/icons8-mongodb.svg";
+import imgNode from "../../../assets/images/icons/icons8-node-js.svg";
+import imgNPM from "../../../assets/images/icons/icons8-npm.svg";
+import imgPostgreSQL from "../../../assets/images/icons/icons8-postgresql.svg";
+import imgPY from "../../../assets/images/icons/icons8-python.svg";
+import imgReactNative from "../../../assets/images/icons/icons8-react-native.svg";
+import imgRedux from "../../../assets/images/icons/icons8-redux.svg";
+import imgSASS from "../../../assets/images/icons/icons8-sass.svg";
+import imgTS from "../../../assets/images/icons/icons8-typescript.svg";
+import imgVSCode from "../../../assets/images/icons/icons8-vscode.svg";
+import imgWebpack from "../../../assets/images/icons/icons8-webpack.svg";
+
 import "./styles/main.css";
 
 const Index = () => {
@@ -8,10 +39,12 @@ const Index = () => {
         <div className="img__container">
           <img
             className="image"
-            src="../../../assets/images/self.png"
-            height="300"
-            width="250"
+            src={imgSelf}
+            height={300}
+            width={250}
             loading="lazy"
+            placeholder="blurred"
+            layout="fixed"
             alt="Self"
           />
         </div>
@@ -127,22 +160,22 @@ const Index = () => {
               >
                 CodePen
               </a>
-              <li id="project--7" className="gallery__project">
-                <a
-                  className="gallery__project--link"
-                  href="https://github.com/CheoR/portfolio"
-                  aria-label="Personal Portfolio"
-                  rel="noopener"
-                  target="_blank"
-                >
-                  Personal Portfolio
-                </a>
-              </li>
+            </li>
+            <li id="project--7" className="gallery__project">
+              <a
+                className="gallery__project--link"
+                href="https://github.com/CheoR/portfolio"
+                aria-label="Personal Portfolio"
+                rel="noopener"
+                target="_blank"
+              >
+                Personal Portfolio
+              </a>
             </li>
             <li id="project--8" className="gallery__project">
               <a
                 className="gallery__project--link"
-                href="../../../assets/pdf/Cheo_Roman_Resume_.pdf"
+                href={resume}
                 aria-label="Download Resume"
                 rel="noopener"
                 target="_blank"
@@ -180,9 +213,9 @@ const Index = () => {
             {/* <!-- PROGRAMMING LANGUAGES --> */}
             <li className="technology__item">
               <img
-                src="../../../assets/images/icons/icons8-python.svg"
-                height="40"
-                width="40"
+                src={imgPY}
+                height={40}
+                width={40}
                 loading="lazy"
                 alt="python icon"
                 className="technology__img"
@@ -190,9 +223,9 @@ const Index = () => {
             </li>
             <li className="technology__item">
               <img
-                src="../../../assets/images/icons/icons8-typescript.svg"
-                height="40"
-                width="40"
+                src={imgTS}
+                height={40}
+                width={40}
                 loading="lazy"
                 alt="typescript icon"
                 className="technology__img"
@@ -200,9 +233,9 @@ const Index = () => {
             </li>
             <li className="technology__item">
               <img
-                src="../../../assets/images/icons/icons8-javascript.svg"
-                height="40"
-                width="40"
+                src={imgJS}
+                height={40}
+                width={40}
                 loading="lazy"
                 alt="javascript icon"
                 className="technology__img"
@@ -212,9 +245,9 @@ const Index = () => {
             {/* <!-- FRONT END --> */}
             <li className="technology__item">
               <img
-                src="../../../assets/images/icons/icons8-react-native.svg"
-                height="40"
-                width="40"
+                src={imgReactNative}
+                height={40}
+                width={40}
                 loading="lazy"
                 alt="react icon"
                 className="technology__img"
@@ -222,9 +255,9 @@ const Index = () => {
             </li>
             <li className="technology__item">
               <img
-                src="../../../assets/images/icons/icons8-chrome-dev.svg"
-                height="40"
-                width="40"
+                src={imgChromeDev}
+                height={40}
+                width={40}
                 loading="lazy"
                 alt="chrome dev icon"
                 className="technology__img"
@@ -232,9 +265,9 @@ const Index = () => {
             </li>
             <li className="technology__item">
               <img
-                src="../../../assets/images/icons/icons8-bootstrap.svg"
-                height="40"
-                width="40"
+                src={imgBootstrap}
+                height={40}
+                width={40}
                 loading="lazy"
                 alt="bootstrap icon"
                 className="technology__img"
@@ -242,9 +275,9 @@ const Index = () => {
             </li>
             <li className="technology__item">
               <img
-                src="../../../assets/images/icons/icons8-sass.svg"
-                height="40"
-                width="40"
+                src={imgSASS}
+                height={40}
+                width={40}
                 loading="lazy"
                 alt="sass icon"
                 className="technology__img"
@@ -252,9 +285,9 @@ const Index = () => {
             </li>
             <li className="technology__item">
               <img
-                src="../../../assets/images/icons/icons8-css3.svg"
-                height="40"
-                width="40"
+                src={imgCSS}
+                height={40}
+                width={40}
                 loading="lazy"
                 alt="css icon"
                 className="technology__img"
@@ -262,9 +295,9 @@ const Index = () => {
             </li>
             <li className="technology__item">
               <img
-                src="../../../assets/images/icons/icons8-html-5.svg"
-                height="40"
-                width="40"
+                src={imgHtml5}
+                height={40}
+                width={40}
                 loading="lazy"
                 alt="html5 icon"
                 className="technology__img"
@@ -274,9 +307,9 @@ const Index = () => {
             {/* <!-- BACK END --> */}
             <li className="technology__item">
               <img
-                src="../../../assets/images/icons/django.svg"
-                height="40"
-                width="40"
+                src={imgDjango}
+                height={40}
+                width={40}
                 loading="lazy"
                 alt="django icon"
                 className="technology__img"
@@ -284,9 +317,9 @@ const Index = () => {
             </li>
             <li className="technology__item">
               <img
-                src="../../../assets/images/icons/icons8-postgresql.svg"
-                height="40"
-                width="40"
+                src={imgPostgreSQL}
+                height={40}
+                width={40}
                 loading="lazy"
                 alt="postgresql icon"
                 className="technology__img"
@@ -294,9 +327,9 @@ const Index = () => {
             </li>
             <li className="technology__item">
               <img
-                src="../../../assets/images/icons/icons8-node-js.svg"
-                height="40"
-                width="40"
+                src={imgNode}
+                height={40}
+                width={40}
                 loading="lazy"
                 alt="node icon"
                 className="technology__img"
@@ -304,9 +337,9 @@ const Index = () => {
             </li>
             <li className="technology__item">
               <img
-                src="../../../assets/images/icons/icons8-npm.svg"
-                height="40"
-                width="40"
+                src={imgNPM}
+                height={40}
+                width={40}
                 loading="lazy"
                 alt="npm icon"
                 className="technology__img"
@@ -314,9 +347,9 @@ const Index = () => {
             </li>
             <li className="technology__item">
               <img
-                src="../../../assets/images/icons/icons8-mongodb.svg"
-                height="40"
-                width="40"
+                src={imgMongoDB}
+                height={40}
+                width={40}
                 loading="lazy"
                 alt="mongo icon"
                 className="technology__img"
@@ -324,9 +357,9 @@ const Index = () => {
             </li>
             <li className="technology__item">
               <img
-                src="../../../assets/images/icons/icons8-graphql.svg"
-                height="40"
-                width="40"
+                src={imgGQL}
+                height={40}
+                width={40}
                 loading="lazy"
                 alt="graphql icon"
                 className="technology__img"
@@ -334,9 +367,9 @@ const Index = () => {
             </li>
             <li className="technology__item">
               <img
-                src="../../../assets/images/icons/icons8-heroku.svg"
-                height="40"
-                width="40"
+                src={imgHeroku}
+                height={40}
+                width={40}
                 loading="lazy"
                 alt="heroku icon"
                 className="technology__img"
@@ -346,9 +379,9 @@ const Index = () => {
             {/* <!-- OTHER --> */}
             <li className="technology__item">
               <img
-                src="../../../assets/images/icons/icons8-webpack.svg"
-                height="40"
-                width="40"
+                src={imgWebpack}
+                height={40}
+                width={40}
                 loading="lazy"
                 alt="webpack icon"
                 className="technology__img"
@@ -356,9 +389,9 @@ const Index = () => {
             </li>
             <li className="technology__item">
               <img
-                src="../../../assets/images/icons/icons8-git.svg"
-                height="40"
-                width="40"
+                src={imgGit}
+                height={40}
+                width={40}
                 loading="lazy"
                 alt="git icon"
                 className="technology__img"
@@ -366,9 +399,9 @@ const Index = () => {
             </li>
             <li className="technology__item">
               <img
-                src="../../../assets/images/icons/icons8-github.svg"
-                height="40"
-                width="40"
+                src={imgGitHub}
+                height={40}
+                width={40}
                 loading="lazy"
                 alt="github icon"
                 className="technology__img"
@@ -376,9 +409,9 @@ const Index = () => {
             </li>
             <li className="technology__item">
               <img
-                src="../../../assets/images/icons/sqLite.svg"
-                height="40"
-                width="40"
+                src={imgSQLite}
+                height={40}
+                width={40}
                 loading="lazy"
                 alt="SQLite icon"
                 className="technology__img"
@@ -386,9 +419,9 @@ const Index = () => {
             </li>
             <li className="technology__item">
               <img
-                src="../../../assets/images/icons/icons8-vscode.svg"
-                height="40"
-                width="40"
+                src={imgVSCode}
+                height={40}
+                width={40}
                 loading="lazy"
                 alt="vscode icon"
                 className="technology__img"
@@ -396,9 +429,9 @@ const Index = () => {
             </li>
             <li className="technology__item">
               <img
-                src="../../../assets/images/icons/icons8-babel.svg"
-                height="40"
-                width="40"
+                src={imgBabel}
+                height={40}
+                width={40}
                 loading="lazy"
                 alt="babel icon"
                 className="technology__img"
@@ -406,9 +439,9 @@ const Index = () => {
             </li>
             <li className="technology__item">
               <img
-                src="../../../assets/images/icons/icons8-figma.svg"
-                height="40"
-                width="40"
+                src={imgFigma}
+                height={40}
+                width={40}
                 loading="lazy"
                 alt="figma icon"
                 className="technology__img"
@@ -416,9 +449,9 @@ const Index = () => {
             </li>
             <li className="technology__item">
               <img
-                src="../../../assets/images/icons/icons8-redux.svg"
-                height="40"
-                width="40"
+                src={imgRedux}
+                height={40}
+                width={40}
                 loading="lazy"
                 alt="redux icon"
                 className="technology__img"
@@ -482,7 +515,9 @@ const Index = () => {
           </ul>
         </section>
         <section className="info__section">
-          <p className="info__copy">&copy; CheoR 2021</p>
+          <p className="info__copy">
+            &copy; CheoR {new Date().getFullYear().toString()}
+          </p>
           <p>
             <a href="#home" aria-label="Back To Top">
               Back To Top
