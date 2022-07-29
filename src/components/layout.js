@@ -1,38 +1,13 @@
 import * as React from "react";
 import { Link } from "gatsby";
-
-const pageStyles = {
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-};
-
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
-
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-};
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-};
-
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-};
+import {
+  container,
+  listStyles,
+  listItemStyles,
+  linkStyle,
+  pageStyles,
+  headingStyles,
+} from "./layout.module.css";
 
 const links = [
   {
@@ -56,12 +31,15 @@ const Layout = ({ pageTitle, children }) => {
   return (
     <div>
       <title>{pageTitle}</title>
-      <nav>
-        <ul style={listStyles}>
+      <nav className={container}>
+        <ul className={listStyles}>
           {links.map((link) => (
-            <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
+            <li
+              key={link.url}
+              className={{ ...listItemStyles, color: link.color }}
+            >
               <span>
-                <Link to={link.url} style={linkStyle}>
+                <Link to={link.url} className={linkStyle}>
                   {link.description}
                 </Link>
               </span>
@@ -69,8 +47,8 @@ const Layout = ({ pageTitle, children }) => {
           ))}
         </ul>
       </nav>
-      <main style={pageStyles}>
-        <h1 style={headingStyles}>
+      <main className={pageStyles}>
+        <h1 className={headingStyles}>
           <span>{pageTitle}</span>
         </h1>
         {children}

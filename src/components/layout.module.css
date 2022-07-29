@@ -1,0 +1,40 @@
+.container {
+  margin: auto;
+  max-width: 500px;
+  font-family: sans-serif;
+}
+
+.pageStyles {
+  padding: 96px;
+    font-family: -apple-system,Roboto,sans-serif,serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headingStyles {
+  margin-top: 0px;
+    margin-bottom: 64px;
+    max-width: 320px;
+}
+
+.listStyles {
+  margin-bottom: 96px;
+    padding-left: 0px;
+  list-style: none;
+}
+
+.listItemStyles {
+  font-weight: 300px;
+    font-size: 24px;
+    max-width: 560px;
+    margin-bottom: 30px;
+}
+
+.linkStyle {
+  color: #8954A8;
+    font-weight: bold;
+    font-size: 16px;
+    vertical-align: 50%;
+}
