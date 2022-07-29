@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[528],{7010:function(o,e,l){l.r(e);l(7294);var t=function(){console.log("Welcome to the main module")};t(),e.default=t}}]);
+//# sourceMappingURL=component---src-pages-v-1-scripts-main-js-65288f211d06cb23ce29.js.map
