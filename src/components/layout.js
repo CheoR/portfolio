@@ -1,13 +1,14 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import {
   container,
+  headingStyles,
   listStyles,
   listItemStyles,
   linkStyle,
   pageStyles,
-  headingStyles,
+  siteTitle,
 } from "./layout.module.css";
 const imgPug =
   "https://images.unsplash.com/photo-1632669671776-cefd05baca87?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80";
@@ -31,9 +32,25 @@ const links = [
 ];
 
 const Layout = ({ pageTitle, children }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `);
+
+  if (!data) return;
   return (
     <div>
-      <title>{pageTitle}</title>
+      <div className={container}>
+        <title>
+          {pageTitle} | {data.site.siteMetadata.title}
+        </title>
+        <header className={siteTitle}>{data.site.siteMetadata.title}</header>
+      </div>
       <nav className={container}>
         <ul className={listStyles}>
           {links.map((link) => (
