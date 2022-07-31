@@ -23,6 +23,8 @@
   margin-bottom: 96px;
     padding-left: 0px;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .listItemStyles {
@@ -37,6 +39,7 @@
     font-weight: bold;
     font-size: 16px;
     vertical-align: 50%;
+    margin: 8px;
 }
 
 .site-title {
