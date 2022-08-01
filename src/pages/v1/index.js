@@ -1,4 +1,10 @@
 import React from "react";
+import {
+  FaCodepen,
+  FaFreeCodeCamp,
+  FaGithubSquare,
+  FaLinkedin,
+} from "react-icons/fa";
 
 import imgSelf from "../../../assets/images/self.png";
 import resume from "../../..//assets/pdf/Cheo_Roman_Resume.pdf";
@@ -471,10 +477,11 @@ const Index = () => {
                 target="_blank"
                 rel="noopener"
               >
-                <i
+                {/* <i
                   className="fa fa-linkedin-square fa-1x"
                   aria-hidden="true"
-                ></i>
+                ></i> */}
+                <FaLinkedin />
               </a>
             </li>
             <li className="socials__item">
@@ -485,7 +492,8 @@ const Index = () => {
                 target="_blank"
                 rel="noopener"
               >
-                <i className="fa fa-github-square fa-1x" aria-hidden="true"></i>
+                {/* <i className="fa fa-github-square fa-1x" aria-hidden="true"></i> */}
+                <FaGithubSquare />
               </a>
             </li>
             <li className="socials__item">
@@ -496,10 +504,11 @@ const Index = () => {
                 target="_blank"
                 rel="noopener"
               >
-                <i
+                {/* <i
                   className="fa fa-free-code-camp fa-1x"
                   aria-hidden="true"
-                ></i>
+                ></i> */}
+                <FaFreeCodeCamp />
               </a>
             </li>
             <li className="socials__item">
@@ -510,7 +519,8 @@ const Index = () => {
                 target="_blank"
                 rel="noopener"
               >
-                <i className="fa fa-codepen fa-1x" aria-hidden="true"></i>
+                {/* <i className="fa fa-codepen fa-1x" aria-hidden="true"></i> */}
+                <FaCodepen />
               </a>
             </li>
           </ul>
