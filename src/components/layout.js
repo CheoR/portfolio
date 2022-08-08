@@ -30,8 +30,13 @@ const links = [
     color: "#663399",
   },
   {
+    url: "/contact",
+    description: "Contact",
+    color: "#663399",
+  },
+  {
     url: "/v1", // https://cheor.github.io/portfolio/v1/",
-    description: "V1 Simple Portfolio V1 Responsive html, css",
+    description: "Portfolio V1",
     color: "#663399",
   },
 ];

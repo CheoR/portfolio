@@ -19,7 +19,7 @@
     "portfolio"
   ],
   "scripts": {
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "start": "gatsby develop",
     "build": "gatsby build",
@@ -27,6 +27,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@formspree/react": "^2.3.0",
     "@mdx-js/mdx": "v1",
     "@mdx-js/react": "v1",
     "gatsby": "^4.19.2",

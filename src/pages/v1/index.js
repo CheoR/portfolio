@@ -202,11 +202,11 @@ const Index = () => {
               <input name="inputEmail" id="inputEmail" type="email" />
             <label for="inputeEmail">
               email
-              <input id="inputeEmail" type="email" name="_replyto">
+              <input id="inputeEmail" type="email" name="_replyto" />
             </label>
             <label for="inputMsg">message</label>
             <textarea name="inputMsg" id="inputMsg" required=""></textarea>
-            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission" />
             <input type="text" name="_gotcha" className="moocow" />
           </fieldset>
           <input className="submit" type="submit" value="Send" />
