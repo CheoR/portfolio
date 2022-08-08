@@ -107,7 +107,7 @@ const Index = () => {
                 className="gallery__project--link"
                 href="https://shipitout.herokuapp.com/"
                 aria-label="GitHub Project: Ship It Out"
-                rel="noopener"
+                rel="noreferrer"
                 target="_blank"
               >
                 ShipItOut
@@ -118,7 +118,7 @@ const Index = () => {
                 className="gallery__project--link"
                 href="https://github.com/CheoR/pack-it-up"
                 aria-label="GitHub Project: Pack It Up"
-                rel="noopener"
+                rel="noreferrer"
                 target="_blank"
               >
                 PackItUp
@@ -129,7 +129,7 @@ const Index = () => {
                 className="gallery__project--link"
                 href="https://github.com/CheoR/BeerMe"
                 aria-label="GitHub Project: Beer Me"
-                rel="noopener"
+                rel="noreferrer"
                 target="_blank"
               >
                 BeerMe
@@ -140,7 +140,7 @@ const Index = () => {
                 className="gallery__project--link"
                 href="https://github.com/CheoR/recommend_wine"
                 aria-label="GitHub Project: Wine Recommender"
-                rel="noopener"
+                rel="noreferrer"
                 target="_blank"
               >
                 Wine Recommender
@@ -151,7 +151,7 @@ const Index = () => {
                 className="gallery__project--link"
                 href="https://github.com/CheoR/FreeCodeCampProjects"
                 aria-label="GitHub Project: Free Code Camp Projects"
-                rel="noopener"
+                rel="noreferrer"
                 target="_blank"
               >
                 FCC Projects
@@ -162,7 +162,7 @@ const Index = () => {
                 className="gallery__project--link"
                 href="https://codepen.io/CheoR/full/QzPJbQ"
                 aria-label="GitHub Project: Code Pen Projects"
-                rel="noopener"
+                rel="noreferrer"
                 target="_blank"
               >
                 CodePen
@@ -173,7 +173,7 @@ const Index = () => {
                 className="gallery__project--link"
                 href="https://github.com/CheoR/portfolio"
                 aria-label="Personal Portfolio"
-                rel="noopener"
+                rel="noreferrer"
                 target="_blank"
               >
                 Personal Portfolio
@@ -184,7 +184,7 @@ const Index = () => {
                 className="gallery__project--link"
                 href={resume}
                 aria-label="Download Resume"
-                rel="noopener"
+                rel="noreferrer"
                 target="_blank"
                 download=""
               >
@@ -475,7 +475,7 @@ const Index = () => {
                 href="https://www.linkedin.com/in/cheo-roman/"
                 aria-label="LinkIn"
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer"
               >
                 {/* <i
                   className="fa fa-linkedin-square fa-1x"
@@ -490,7 +490,7 @@ const Index = () => {
                 href="https://github.com/CheoR"
                 aria-label="GitHub"
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer"
               >
                 {/* <i className="fa fa-github-square fa-1x" aria-hidden="true"></i> */}
                 <FaGithubSquare />
@@ -502,7 +502,7 @@ const Index = () => {
                 href="https://www.freecodecamp.org/cheor"
                 aria-label="Free Code Camp"
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer"
               >
                 {/* <i
                   className="fa fa-free-code-camp fa-1x"
@@ -517,7 +517,7 @@ const Index = () => {
                 href="http://codepen.io/CheoR/"
                 aria-label="Code Pen"
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer"
               >
                 {/* <i className="fa fa-codepen fa-1x" aria-hidden="true"></i> */}
                 <FaCodepen />

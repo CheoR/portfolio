@@ -2,7 +2,7 @@ import * as React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
 import Layout from "../../components/layout";
-// import styles from "./contact.module.css";
+import * as styles from "./contact.module.css";
 
 const fsURL = process.env.GATSBY_FORMSPREE_URL;
 const fsEndpoint = process.env.GATSBY_FORMSPREE_ENDPOINT;
@@ -74,8 +74,7 @@ const ContactPage = () => {
               id="email-subject"
               type="text"
               name="_gotcha"
-              value="Contact Form Submission"
-              className="moocow"
+              className={styles.moocow}
             />
           </fieldset>
           <button className="submit" type="submit" disabled={state.submitting}>
