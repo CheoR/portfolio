@@ -6,7 +6,7 @@ module.exports = {
   pathPrefix: "/portfolio",
   siteMetadata: {
     title: `Cheo Roman Portfolio`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://cheor.github.io/portfolio/`,
   },
   plugins: [
     "gatsby-plugin-image",

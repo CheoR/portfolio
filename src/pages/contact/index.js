@@ -22,7 +22,7 @@ const ContactPage = () => {
       <>
         <h2>get in touch</h2>
         <form
-          className="main__form"
+          className={styles.main__form}
           id="fs-frm"
           name="simple-contact-form"
           acceptCharset="utf-8"
@@ -30,9 +30,12 @@ const ContactPage = () => {
           method="POST"
           onSubmit={handleSubmit}
         >
-          <fieldset className="main__form__fieldset">
-            <label htmlFor="inputName">name</label>
+          <fieldset className={styles.main__form__fieldset}>
+            <label className={styles.main__form_label} htmlFor="inputName">
+              name
+            </label>
             <input
+              className={styles.main__form_input}
               name="inputName"
               id="inputName"
               type="text"
@@ -44,8 +47,11 @@ const ContactPage = () => {
               errors={state.errors}
             />
 
-            <label htmlFor="inputEmail">email</label>
+            <label className={styles.main__form_label} htmlFor="inputEmail">
+              email
+            </label>
             <input
+              className={styles.main__form_input}
               name="inputEmail"
               id="inputEmail"
               type="email"
@@ -57,8 +63,11 @@ const ContactPage = () => {
               errors={state.errors}
             />
 
-            <label htmlFor="inputMsg">message</label>
+            <label className={styles.main__form_label} htmlFor="inputMsg">
+              message
+            </label>
             <textarea
+              className={styles.main__form_textarea}
               name="inputMsg"
               id="inputMsg"
               required=""
@@ -77,7 +86,12 @@ const ContactPage = () => {
               className={styles.moocow}
             />
           </fieldset>
-          <button className="submit" type="submit" disabled={state.submitting}>
+
+          <button
+            className={styles.main__form_submit}
+            type="submit"
+            disabled={state.submitting}
+          >
             Submit
           </button>
         </form>
