@@ -58,6 +58,10 @@
   font-size: 1.5rem;
 }
 
+.children {
+  margin: .5rem 0;
+}
+
 
 
 /* Extra small mobile */
@@ -68,80 +72,64 @@
 
 /* Small mobile */
 @media only screen and (min-width: 376px) {
-  body {
-
-    background: black;
+  .header {
+    font-size: 3rem;
   }
-
-  .navbar {
-    background: black;
-  }
-    .header {
-      font-size: 3rem;
-      background: lightgreen;
-    }
 }
 
 /* Medium mobile)*/
 @media only screen and (min-width: 424px) {
-  body {
-
-    background: red;
-  }
-
-  .navbar {
-    background: red;
+  .navLinks {
+    flex-direction: row;
   }
 }
 
 
 /* Large mobile */
 @media only screen and (min-width: 768px) {
-  body {
-
-    background: green;
+  .navbar {
+    width: 80%;
+    margin: 0 auto;
   }
 
-  .navbar {
-    background: green;
+  .heading {
+    text-align: center;
+  }
+  .heading span {
+    margin: 0 auto;
   }
 }
 
 
 /* Laptop  */
 @media only screen and (min-width: 1024px) {
-  body {
-
-    background: blue;
+  .navbar {
+    width: 60%
   }
 
-  .navbar {
-    background: blue;
+  .children {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .staticImg {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
   }
 }
 
 
 /* LaptopL Large */
 @media only screen and (min-width: 1440px) {
-  body {
-
-    background: yellow;
-  }
-
   .navbar {
-    background: yellow;
+    width: 50%;
   }
 }
 
 
 /* Desktop devices & large screens */
-@media only screen and (min-width: 2560px) {
-  body {
+/* @media only screen and (min-width: 2560px) {
 
-    background: pink;
-  }
-
-  .navbar {
-    background: pink;
-  }
-}
+} */

@@ -68,8 +68,10 @@ const Layout = ({ pageTitle, children }) => {
         <h1 className={styles.heading}>
           <span>{pageTitle}</span>
         </h1>
-        {children}
-        <StaticImage src={imgPug} alt="Pug by @jamestiono" />
+        <div className={styles.children}>{children}</div>
+        <div className={styles.staticImg}>
+          <StaticImage src={imgPug} alt="Pug by @jamestiono" />
+        </div>
       </main>
     </div>
   );

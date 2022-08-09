@@ -37,3 +37,16 @@
   position: absolute;
   display: none;
 }
+
+@media only screen and (min-width: 1024px) {
+ .main__form {
+  width: 80%;
+  margin: 1.25rem auto;
+ }
+}
+
+@media only screen and (min-width: 1440px) {
+  .main__form {
+      width: 50%;
+    }
+}
