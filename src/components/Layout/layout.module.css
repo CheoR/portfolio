@@ -133,3 +133,58 @@
 /* @media only screen and (min-width: 2560px) {
 
 } */
+
+/* :root {
+  --mobileS: 320px;
+  --mobileM: 376px;
+  --mobileL: 424px;
+  --tablet:  768px;
+  --laptop:  1024px;
+  --laptopL: 1440px;
+  --desktop: 2560px;
+} */
+.header {
+  background: red;
+}
+
+@media only screen and (min-width: 320px) {
+  .header {
+    background: lightblue;
+  }
+}
+
+@media only screen and (min-width: 376px) {
+  .header {
+    background: lightgreen;
+  }
+}
+
+@media only screen and (min-width: 424px) {
+  .header {
+    background: lightcoral;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    background: lightpink;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .header {
+    background: lightyellow;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .header {
+    background: lightcyan;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .header {
+    background: lightseagreen;
+  }
+}
