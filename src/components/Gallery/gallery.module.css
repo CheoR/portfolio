@@ -1,0 +1,35 @@
+.cards {
+  background-color: cadetblue;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: .5rem;
+}
+
+.gallery {
+  background-color: aquamarine;
+}
+
+.gallery__title {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery__searchbar {
+  max-width: 100%;
+  display: block;
+}
+
+@media only screen and (min-width: 376px) {
+  .gallery__title {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+  .gallery__searchbar {
+    max-width: 250px;
+    display: block;
+  }
+}
