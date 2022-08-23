@@ -74,3 +74,150 @@ export const PROJECTS = [
     tags: ["Resume"],
   },
 ];
+
+export const CHIPS = [
+  // languages
+  {
+    order: 1,
+    long: "Java",
+    short: "Java",
+    icon: "",
+  },
+  {
+    order: 1,
+    long: "JavaScript",
+    short: "JS",
+    icon: "",
+  },
+  {
+    order: 1,
+    long: "Python",
+    short: "Py",
+    icon: "",
+  },
+  {
+    order: 1,
+    long: "SQL",
+    short: "SQL",
+    icon: "",
+  },
+  // frameworks
+  {
+    order: 2,
+    long: "Apollo-Client",
+    short: "Apollo",
+    icon: "",
+  },
+  {
+    order: 2,
+    long: "Apollo-Server",
+    short: "Apollo",
+    icon: "",
+  },
+  {
+    order: 2,
+    long: "Express",
+    short: "Ex",
+    icon: "",
+  },
+  {
+    order: 2,
+    long: "Django",
+    short: "DJ",
+    icon: "",
+  },
+  {
+    order: 2,
+    long: "Gatsby",
+    short: "Gatsby",
+    icon: "",
+  },
+  {
+    order: 2,
+    long: "Nextjs",
+    short: "Nextjs",
+    icon: "",
+  },
+  // testings
+  {
+    order: 3,
+    long: "Jest",
+    short: "Jest",
+    icon: "",
+  },
+  {
+    order: 3,
+    long: "Cypress",
+    short: "Cy",
+    icon: "",
+  },
+  // server-side
+  {
+    order: 4,
+    long: "Heroku",
+    short: "Heroku",
+    icon: "",
+  },
+  {
+    order: 4,
+    long: "MongoDB",
+    short: "Mongo",
+    icon: "",
+  },
+  {
+    order: 4,
+    long: "Node",
+    short: "Node",
+    icon: "",
+  },
+  {
+    order: 4,
+    long: "PostgresSQL",
+    short: "PostgresSQL",
+    icon: "",
+  },
+  {
+    order: 4,
+    long: "Redis",
+    short: "Redis",
+    icon: "",
+  },
+  // client-side
+  {
+    order: 5,
+    long: "Android",
+    short: "Android",
+    icon: "",
+  },
+  {
+    order: 5,
+    long: "Bootstrap",
+    short: "Bootstrap",
+    icon: "",
+  },
+  {
+    order: 5,
+    long: "CSS",
+    short: "CSS",
+    icon: "",
+  },
+  {
+    order: 5,
+    long: "Material-UI",
+    short: "MUI",
+    icon: "",
+  },
+  {
+    order: 5,
+    long: "SASS",
+    short: "SASS",
+    icon: "",
+  },
+  // ui/ux
+  {
+    order: 6,
+    long: "Figma",
+    short: "Figma",
+    icon: "",
+  },
+];

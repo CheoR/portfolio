@@ -10,16 +10,27 @@
 
 .gallery {
   background-color: aquamarine;
+  width: 100%;
 }
 
 .gallery__title {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .gallery__searchbar {
   max-width: 100%;
   display: block;
+}
+
+.gallery__chipbar {
+  display: flex;
+  background-color: blanchedalmond;
+    /* overflow-y: auto; */
+      /* overflow-x: hidden; */
+      overflow: hidden;
+  width: 100%;
 }
 
 @media only screen and (min-width: 376px) {
