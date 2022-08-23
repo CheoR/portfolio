@@ -26,11 +26,11 @@ const Gallery = () => {
     <div className={styles.gallery}>
       <div className={styles.gallery__title}>
         <div>Gallery</div>
-        <div className={styles.gallery__chipbar}>
+        {/* <div className={styles.gallery__chipbar}>
           {CHIPS.map((chip, idx) => (
             <Chip key={idx} data={chip} />
           ))}
-        </div>
+        </div> */}
         <input
           className={styles.gallery__searchbar}
           value={inputField.value}

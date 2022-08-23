@@ -27,10 +27,9 @@
 .gallery__chipbar {
   display: flex;
   background-color: blanchedalmond;
-    /* overflow-y: auto; */
-      /* overflow-x: hidden; */
-      overflow: hidden;
+  gap: 1rem;
   width: 100%;
+  overflow-x: auto;
 }
 
 @media only screen and (min-width: 376px) {
