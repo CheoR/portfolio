@@ -2,8 +2,8 @@ import React, { useRef, useState } from "react";
 import Card from "./Card";
 import * as styles from "./gallery.module.css";
 
-import { CHIPS, PROJECTS } from "./data";
-import { Chip } from "./Chip";
+import { PROJECTS } from "./data";
+// import { Chip } from "./Chip";
 
 const Gallery = () => {
   const inputField = useRef();

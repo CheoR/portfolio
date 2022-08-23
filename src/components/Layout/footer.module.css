@@ -1,0 +1,22 @@
+.footer {
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__contacts {
+  display: flex;
+}
+
+.footer__contacts__item {
+  padding: .125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 .125rem;
+}
+
+.footer__contacts__link {
+  display: flex;
+  justify-content: center;
+}
