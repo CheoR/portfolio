@@ -1,11 +1,10 @@
 import * as React from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+
+import Footer from "./Footer";
+
 import "../global.css";
 import * as styles from "./layout.module.css";
-import Footer from "./Footer";
-const imgPug =
-  "https://images.unsplash.com/photo-1632669671776-cefd05baca87?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80";
 
 const links = [
   {
@@ -70,9 +69,6 @@ const Layout = ({ pageTitle, children }) => {
           <span>{pageTitle}</span>
         </h1>
         <div className={styles.children}>{children}</div>
-        <div className={styles.staticImg}>
-          <StaticImage src={imgPug} alt="Pug by @jamestiono" />
-        </div>
       </main>
       <Footer />
     </div>
