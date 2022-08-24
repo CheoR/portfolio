@@ -1,18 +1,52 @@
-import * as React from "react";
-import { Link, graphql } from "gatsby";
+import React, { useRef, useState } from "react";
+import { graphql } from "gatsby";
 import Layout from "../../components/Layout/Layout";
+import Card from "./Card";
+
+import * as styles from "../../components/Gallery/gallery.module.css";
 
 const Blog = ({ data }) => {
+  const BLOGS = data.allMdx.nodes;
+
+  const inputField = useRef();
+  const [filteredData, setFilteredData] = useState(BLOGS);
+  const searchItems = (searchTerm) => {
+    if (!searchTerm) {
+      setFilteredData(BLOGS);
+    }
+    const filteredData = BLOGS.filter(
+      (project) => true // project.description.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    if (filteredData.length) {
+      setFilteredData(filteredData);
+    } else {
+      setFilteredData([]);
+    }
+  };
+
   return (
     <Layout pageTitle="My Blog Posts">
-      {data.allMdx.nodes.map((node) => (
-        <article key={node.id}>
-          <h2>
-            <Link to={`/blog/${node.slug}`}>{node.frontmatter.title}</Link>
-          </h2>
-          <p>Posted: {node.frontmatter.datePublished}</p>
-        </article>
-      ))}
+      <div className={styles.gallery}>
+        <div className={styles.gallery__title}>
+          <div>Gallery</div>
+          {/* <div className={styles.gallery__chipbar}>
+          {CHIPS.map((chip, idx) => (
+            <Chip key={idx} data={chip} />
+          ))}
+        </div> */}
+          <input
+            className={styles.gallery__searchbar}
+            value={inputField.value}
+            placeholder="Search . . "
+            onChange={(e) => searchItems(e.target.value)}
+          />
+        </div>
+        <div className={styles.cards}>
+          {filteredData.map((blog) => (
+            <Card key={blog.id} data={blog} />
+          ))}
+        </div>
+      </div>
     </Layout>
   );
 };
