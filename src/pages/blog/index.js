@@ -14,8 +14,8 @@ const Blog = ({ data }) => {
     if (!searchTerm) {
       setFilteredData(BLOGS);
     }
-    const filteredData = BLOGS.filter(
-      (project) => true // project.description.toLowerCase().includes(searchTerm.toLowerCase())
+    const filteredData = BLOGS.filter((blog) =>
+      blog.body.toLowerCase().includes(searchTerm.toLowerCase())
     );
     if (filteredData.length) {
       setFilteredData(filteredData);

@@ -3,8 +3,10 @@ import { Link } from "gatsby";
 import * as styles from "./card.module.css";
 
 const Card = (props) => {
+  console.log("\n\n===========");
+  console.table(props.data.frontmatter);
   return (
-    <article key={props.data.id} className={styles.card}>
+    <article className={styles.card}>
       <div className={styles.card__image}>img</div>
       <div className={styles.card__chips}>chips</div>
       <div className={styles.card__description}>
