@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout/Layout";
-import Card from "./Card";
+import Card from "../../components/Card/Card";
 
 import * as styles from "../../components/Gallery/gallery.module.css";
 
