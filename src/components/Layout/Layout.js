@@ -1,5 +1,5 @@
 import * as React from "react";
-import { graphql, Link, useStaticQuery } from "gatsby";
+import { Link } from "gatsby";
 
 import Footer from "./Footer";
 
@@ -30,27 +30,8 @@ const links = [
 ];
 
 const Layout = ({ pageTitle, children }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
-  if (!data) return;
   return (
     <div className={styles.container}>
-      <div className={styles.title}>
-        <title>
-          {pageTitle} | {data.site.siteMetadata.title}
-        </title>
-        <header className={styles.header}>
-          {data.site.siteMetadata.title}
-        </header>
-      </div>
       <nav className={styles.navbar}>
         <ul className={styles.navLinks}>
           {links.map((link) => (
