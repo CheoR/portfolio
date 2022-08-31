@@ -9,6 +9,7 @@ module.exports = {
     siteUrl: `https://cheor.github.io/portfolio/`,
     author: "CheoR",
     description: "CheoR Web Dev Portfolio",
+    image: '"./assets/images/self.png"',
   },
   plugins: [
     "gatsby-plugin-image",
