@@ -2,6 +2,8 @@ import * as React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
 import Layout from "../../components/Layout/Layout";
+import { SEO } from "../../components/SEO/SEO";
+
 import * as styles from "./contact.module.css";
 
 const fsURL = process.env.GATSBY_FORMSPREE_URL;
@@ -101,3 +103,6 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
+
+// eslint-disable-next-line
+export const Head = () => <SEO title="Contact" description="Contact Page" />;

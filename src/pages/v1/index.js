@@ -6,6 +6,8 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 
+import { SEO } from "../../components/SEO/SEO";
+
 import imgSelf from "../../../assets/images/self.png";
 import resume from "../../..//assets/pdf/Cheo_Roman_Resume.pdf";
 import imgDjango from "../../../assets/images/icons/django.svg";
@@ -545,3 +547,8 @@ const Index = () => {
 };
 
 export default Index;
+
+export const Head = () => (
+  // eslint-disable-next-line
+  <SEO title="V1 Portfolio" description="Personal portfolio version one" />
+);

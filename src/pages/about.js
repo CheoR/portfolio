@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
+import { SEO } from "../components/SEO/SEO";
 
 const AboutPage = () => {
   return (
@@ -49,3 +50,6 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
+
+// eslint-disable-next-line
+export const Head = () => <SEO title="About" description="About Page" />;

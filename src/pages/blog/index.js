@@ -1,7 +1,9 @@
 import React, { useRef, useState } from "react";
 import { graphql } from "gatsby";
+
 import Layout from "../../components/Layout/Layout";
 import Card from "../../components/Card/Card";
+import { SEO } from "../../components/SEO/SEO";
 
 import * as styles from "../../components/Gallery/gallery.module.css";
 
@@ -69,3 +71,6 @@ export const query = graphql`
 `;
 
 export default Blog;
+
+// eslint-disable-next-line
+export const Head = () => <SEO title="Blogs" description="Blogs Page" />;

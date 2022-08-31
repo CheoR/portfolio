@@ -4,6 +4,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 import Layout from "../../components/Layout/Layout";
+import { SEO } from "../../components/SEO/SEO";
 
 const BlogPost = ({ data }) => {
   const { frontmatter: fm, body } = data.mdx;
@@ -46,3 +47,12 @@ export const query = graphql`
   }
 `;
 export default BlogPost;
+
+export const Head = ({ data }) => (
+  // eslint-disable-next-line
+  <SEO
+    title={data.mdx.frontmatter.title}
+    description={`Blog about ${data.mdx.frontmatter.title}`}
+    image={data.mdx.frontmatter.hero_image}
+  />
+);
