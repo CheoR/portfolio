@@ -1,18 +1,19 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { getImage, GatsbyImage } from "gatsby-plugin-image";
 
 import Layout from "../../components/Layout/Layout";
 import { SEO } from "../../components/SEO/SEO";
 
 const BlogPost = ({ data }) => {
   const { frontmatter: fm, body } = data.mdx;
+  const image = getImage(data.mdx.frontmatter.hero_image);
 
   return (
     <Layout pageTitle={fm.title}>
       <p>{fm.datePublished}</p>
-      <GatsbyImage image={fm.hero_image} alt={fm.hero_image_alt} />
+      <GatsbyImage image={image} alt={fm.hero_image_alt} />
       <p>
         Photo Credit:{" "}
         <a href={fm.hero_image_credit_link}>{fm.hero_image_credit_text}</a>
