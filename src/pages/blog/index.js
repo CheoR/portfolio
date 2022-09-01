@@ -43,6 +43,7 @@ const Blog = ({ data }) => {
             onChange={(e) => searchItems(e.target.value)}
           />
         </div>
+
         <div className={styles.cards}>
           {filteredData.map((blog) => (
             <Card key={blog.id} data={blog} />
@@ -59,11 +60,11 @@ export const query = graphql`
       nodes {
         id
         body
-        slug
         frontmatter {
           author
           datePublished(formatString: "MMMM D, YYYY")
           title
+          slug
         }
       }
     }
