@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import Layout from "../components/Layout/Layout";
 import Gallery from "../components/Gallery/Gallery";
 import { SEO } from "../components/SEO/SEO";

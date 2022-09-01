@@ -46,5 +46,6 @@ module.exports = {
       },
       __key: "images",
     },
+    "gatsby-theme-material-ui",
   ],
 };
