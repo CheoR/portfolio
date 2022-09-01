@@ -1,4 +1,5 @@
 import * as React from "react";
+import CssBaseline from "@mui/material/CssBaseline";
 
 import Layout from "../components/Layout/Layout";
 import Gallery from "../components/Gallery/Gallery";
@@ -6,10 +7,13 @@ import { SEO } from "../components/SEO/SEO";
 
 const IndexPage = () => {
   return (
-    <Layout pageTitle="Home">
-      Nothing to see here.
-      <Gallery />
-    </Layout>
+    <>
+      <CssBaseline />
+      <Layout pageTitle="Home">
+        Nothing to see here.
+        <Gallery />
+      </Layout>
+    </>
   );
 };
 
