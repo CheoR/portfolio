@@ -1,14 +1,13 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import { MDXRenderer } from "gatsby-plugin-mdx";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
 
 import Layout from "../../components/Layout/Layout";
 import { SEO } from "../../components/SEO/SEO";
 
-const BlogPost = ({ data }) => {
-  const { frontmatter: fm, body } = data.mdx;
-  const image = getImage(data.mdx.frontmatter.hero_image);
+const BlogPost = ({ data, children }) => {
+  const { frontmatter: fm } = data.mdx;
+  const image = getImage(fm.hero_image);
 
   return (
     <Layout pageTitle={fm.title}>
@@ -18,7 +17,7 @@ const BlogPost = ({ data }) => {
         Photo Credit:{" "}
         <a href={fm.hero_image_credit_link}>{fm.hero_image_credit_text}</a>
       </p>
-      <MDXRenderer>{body}</MDXRenderer>
+      {children}
     </Layout>
   );
 };
@@ -47,6 +46,7 @@ export const query = graphql`
     }
   }
 `;
+
 export default BlogPost;
 
 export const Head = ({ data }) => (

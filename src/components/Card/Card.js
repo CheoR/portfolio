@@ -11,7 +11,7 @@ const Card = (props) => {
         {props.data?.frontmatter.title}
       </div>
       <div className={styles.card__btns}>
-        <Link to={`/blog/${props.data?.slug}`}>
+        <Link to={`/blog/${props.data?.frontmatter.slug}`}>
           <button className={styles.card__btn}>Read More . .</button>
         </Link>
         <p>Posted: {props.data?.frontmatter.datePublished}</p>

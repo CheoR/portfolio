@@ -3,7 +3,7 @@ import * as styles from "./card.module.css";
 
 const Card = (prop) => {
   return (
-    <div key={prop.key} className={styles.card}>
+    <div className={styles.card}>
       <div className={styles.card__image}>img</div>
       <div className={styles.card__chips}>chips</div>
       <div className={styles.card__description}>{prop.data.description}</div>
