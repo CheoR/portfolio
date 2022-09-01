@@ -32,6 +32,9 @@ const links = [
 const Layout = ({ pageTitle, children }) => {
   return (
     <div className={styles.container}>
+      <div className={styles.title}>
+        <header className={styles.header}>CheoR Portfolio</header>
+      </div>
       <nav className={styles.navbar}>
         <ul className={styles.navLinks}>
           {links.map((link) => (
