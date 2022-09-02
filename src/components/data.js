@@ -222,25 +222,25 @@ export const CHIPS = [
   },
 ];
 
-export const LINKS = [
+export const PAGES = [
   {
     url: "/",
-    description: "Home",
+    page: "Home",
   },
   {
     url: "/about",
-    description: "About",
+    page: "About",
   },
   {
     url: "/blog",
-    description: "Blog",
+    page: "Blog",
   },
   {
     url: "/contact",
-    description: "Contact",
+    page: "Contact",
   },
   {
     url: "/v1", // https://cheor.github.io/portfolio/v1/",
-    description: "Portfolio V1",
+    page: "Portfolio V1",
   },
 ];
