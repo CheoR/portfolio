@@ -4,18 +4,18 @@ import { Link } from "gatsby";
 import Footer from "./Footer";
 
 import "../global.css";
-import * as styles from "./layout.module.css";
+// import * as styles from "./layout.module.css";
 import { Container } from "@mui/material";
 
 import Navbar from "../Navbar/Navbar";
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <Container sx={{ background: "red" }}>
+    <>
       <Navbar />
-      {children}
+      <Container sx={{ background: "red" }}>{children}</Container>
       <Footer />
-    </Container>
+    </>
     // <div className={styles.container}>
     //   <div className={styles.title}>
     //     <header className={styles.header}>CheoR Portfolio</header>
