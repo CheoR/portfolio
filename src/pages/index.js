@@ -4,15 +4,18 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Layout from "../components/Layout/Layout";
 import Gallery from "../components/Gallery/Gallery";
 import { SEO } from "../components/SEO/SEO";
+import { Paper } from "@mui/material";
 
 const IndexPage = () => {
   return (
     <>
       <CssBaseline />
-      <Layout pageTitle="Home">
-        Nothing to see here.
-        <Gallery />
-      </Layout>
+      <Paper>
+        <Layout pageTitle="Home">
+          Nothing to see here.
+          <Gallery />
+        </Layout>
+      </Paper>
     </>
   );
 };
