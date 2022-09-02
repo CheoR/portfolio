@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import Card from "./Card";
 import * as styles from "./gallery.module.css";
 
-import { PROJECTS } from "./data";
+import { PROJECTS } from "../data";
 // import { Chip } from "./Chip";
 
 const Gallery = () => {

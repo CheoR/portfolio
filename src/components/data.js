@@ -221,3 +221,26 @@ export const CHIPS = [
     icon: "",
   },
 ];
+
+export const LINKS = [
+  {
+    url: "/",
+    description: "Home",
+  },
+  {
+    url: "/about",
+    description: "About",
+  },
+  {
+    url: "/blog",
+    description: "Blog",
+  },
+  {
+    url: "/contact",
+    description: "Contact",
+  },
+  {
+    url: "/v1", // https://cheor.github.io/portfolio/v1/",
+    description: "Portfolio V1",
+  },
+];
