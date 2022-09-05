@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid, IconButton, Typography } from "@mui/material";
 import React from "react";
 import {
   FaCodepen,
@@ -9,6 +9,8 @@ import {
 
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+
+import { SOCIALS } from "../data";
 
 const Footer = () => {
   return (
@@ -50,8 +52,20 @@ const Footer = () => {
                 background: "lightblue",
               }}
             >
-              <LinkedInIcon fontSize="large" />
-              <GitHubIcon fontSize="large" />
+              <IconButton
+                href={SOCIALS.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <LinkedInIcon fontSize="large" />
+              </IconButton>
+              <IconButton
+                href={SOCIALS.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GitHubIcon fontSize="large" />
+              </IconButton>
             </Typography>
           </Box>
         </Grid>
@@ -78,71 +92,5 @@ const Footer = () => {
     </Box>
   );
 };
-
-// const Footer = () => {
-//   return (
-//     <footer className={styles.footer}>
-//       <div className={styles.footer__copywrite}>
-//         &copy; CheoR {new Date().getFullYear().toString()}
-//       </div>
-//       <ul className={styles.footer__contacts}>
-//         <li className={styles.footer__contacts__item}>
-//           <a
-//             className={styles.footer__contacts__link}
-//             href="https://www.linkedin.com/in/cheo-roman/"
-//             aria-label="LinkIn"
-//             target="_blank"
-//             rel="noreferrer"
-//           >
-//             {/* <i
-//                   className="fa fa-linkedin-square fa-1x"
-//                   aria-hidden="true"
-//                 ></i> */}
-//             <FaLinkedin />
-//           </a>
-//         </li>
-//         <li className={styles.footer__contacts__item}>
-//           <a
-//             className={styles.footer__contacts__link}
-//             href="https://github.com/CheoR"
-//             aria-label="GitHub"
-//             target="_blank"
-//             rel="noreferrer"
-//           >
-//             {/* <i className="fa fa-github-square fa-1x" aria-hidden="true"></i> */}
-//             <FaGithubSquare />
-//           </a>
-//         </li>
-//         <li className={styles.footer__contacts__item}>
-//           <a
-//             className={styles.footer__contacts__link}
-//             href="https://www.freecodecamp.org/cheor"
-//             aria-label="Free Code Camp"
-//             target="_blank"
-//             rel="noreferrer"
-//           >
-//             {/* <i
-//                   className="fa fa-free-code-camp fa-1x"
-//                   aria-hidden="true"
-//                 ></i> */}
-//             <FaFreeCodeCamp />
-//           </a>
-//         </li>
-//         <li className={styles.footer__contacts__item}>
-//           <a
-//             className={styles.footer__contacts__link}
-//             href="http://codepen.io/CheoR/"
-//             aria-label="Code Pen"
-//             target="_blank"
-//             rel="noreferrer"
-//           >
-//             {/* <i className="fa fa-codepen fa-1x" aria-hidden="true"></i> */}
-//             <FaCodepen />
-//           </a>
-//         </li>
-//       </ul>
-//     </footer>
-//   );
-// };
 
 export default Footer;

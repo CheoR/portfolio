@@ -244,3 +244,8 @@ export const PAGES = [
     page: "Portfolio V1",
   },
 ];
+
+export const SOCIALS = {
+  linkedin: "https://www.linkedin.com/in/cheo-roman",
+  github: "https://github.com/CheoR",
+};
