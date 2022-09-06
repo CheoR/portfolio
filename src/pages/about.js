@@ -5,7 +5,7 @@ import { SEO } from "../components/SEO/SEO";
 const AboutPage = () => {
   return (
     <Layout pageTitle="About">
-      <section className="main__content">
+      <section style={{ height: "100vh" }}>
         <p>
           <b>Hi</b> My name is Cheo. I'm a Nashville-based developer.
         </p>

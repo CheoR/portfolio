@@ -1,12 +1,6 @@
-import { Box, Container, Grid, IconButton, Typography } from "@mui/material";
 import React from "react";
-import {
-  FaCodepen,
-  FaFreeCodeCamp,
-  FaGithubSquare,
-  FaLinkedin,
-} from "react-icons/fa";
 
+import { Box, Grid, IconButton, Typography } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 

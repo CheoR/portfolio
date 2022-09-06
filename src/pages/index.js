@@ -12,7 +12,6 @@ const IndexPage = () => {
       <CssBaseline />
       <Paper>
         <Layout pageTitle="Home">
-          Nothing to see here.
           <Gallery />
         </Layout>
       </Paper>
