@@ -29,7 +29,7 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AttractionsIcon

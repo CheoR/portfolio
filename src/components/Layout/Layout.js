@@ -1,33 +1,31 @@
 import * as React from "react";
-import { Link } from "gatsby";
+
+import { Box, Container } from "@mui/material";
 
 import Footer from "./Footer";
+import Navbar from "../Navbar/Navbar";
 
 import "../global.css";
-// import * as styles from "./layout.module.css";
-import { Container } from "@mui/material";
-
-import Navbar from "../Navbar/Navbar";
+import * as styles from "./layout.module.css";
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        height: "100vh",
+      }}
+    >
       <Navbar />
-      <Container sx={{ background: "red" }}>{children}</Container>
+      <Container component="main">
+        <h1 className={styles.heading}>
+          <span>{pageTitle}</span>
+        </h1>
+        {children}
+      </Container>
       <Footer />
-    </>
-    // <div className={styles.container}>
-    //   <div className={styles.title}>
-    //     <header className={styles.header}>CheoR Portfolio</header>
-    //   </div>
-    //   <main className={styles.page}>
-    //     <h1 className={styles.heading}>
-    //       <span>{pageTitle}</span>
-    //     </h1>
-    //     <div className={styles.children}>{children}</div>
-    //   </main>
-    //   <Footer />
-    // </div>
+    </Box>
   );
 };
 
