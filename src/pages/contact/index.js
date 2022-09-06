@@ -21,7 +21,6 @@ const ContactPage = () => {
 
   return (
     <Layout pageTitle="Contact">
-      <h2>get in touch</h2>
       <form
         className={styles.main__form}
         id="fs-frm"

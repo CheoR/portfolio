@@ -7,14 +7,14 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/material";
 
-const MediaCard = (prop) => {
+const ProjectCard = (props) => {
   return (
     <Card sx={{ width: 345, maxHeight: 400 }}>
       <CardMedia
         component="img"
         height="140"
-        image="/static/images/cards/contemplative-reptile.jpg"
-        alt="GitHub Preview"
+        image={props.data.preview}
+        alt=""
       />
       <CardContent
         sx={{
@@ -26,19 +26,19 @@ const MediaCard = (prop) => {
       >
         <Box>
           <Typography gutterBottom variant="h5" component="div">
-            {prop.data.label}
+            {props.data.label}
           </Typography>
         </Box>
         <Box>
           <Typography variant="body2" color="text.secondary">
-            {prop.data.description}
+            {props.data.description}
           </Typography>
         </Box>
       </CardContent>
       <CardActions>
         <Button
           size="small"
-          href={prop.data.link}
+          href={props.data.link}
           target="_blank"
           rel="noopener"
         >
@@ -46,7 +46,7 @@ const MediaCard = (prop) => {
         </Button>
         <Button
           size="small"
-          href={prop.data.repo}
+          href={props.data.repo}
           target="_blank"
           rel="noopener"
         >
@@ -57,4 +57,4 @@ const MediaCard = (prop) => {
   );
 };
 
-export default MediaCard;
+export default ProjectCard;
