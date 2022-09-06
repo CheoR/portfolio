@@ -1,18 +1,60 @@
-import React from "react";
-import * as styles from "./card.module.css";
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import { Box } from "@mui/material";
 
-const Card = (prop) => {
+const MediaCard = (prop) => {
   return (
-    <div className={styles.card}>
-      <div className={styles.card__image}>img</div>
-      <div className={styles.card__chips}>chips</div>
-      <div className={styles.card__description}>{prop.data.description}</div>
-      <div className={styles.card__btns}>
-        <button className={styles.card__btn}>demo</button>
-        <button className={styles.card__btn}>github</button>
-      </div>
-    </div>
+    <Card sx={{ width: 345, maxHeight: 400 }}>
+      <CardMedia
+        component="img"
+        height="140"
+        image="/static/images/cards/contemplative-reptile.jpg"
+        alt="GitHub Preview"
+      />
+      <CardContent
+        sx={{
+          height: 250,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+        }}
+      >
+        <Box>
+          <Typography gutterBottom variant="h5" component="div">
+            {prop.data.label}
+          </Typography>
+        </Box>
+        <Box>
+          <Typography variant="body2" color="text.secondary">
+            {prop.data.description}
+          </Typography>
+        </Box>
+      </CardContent>
+      <CardActions>
+        <Button
+          size="small"
+          href={prop.data.link}
+          target="_blank"
+          rel="noopener"
+        >
+          demo
+        </Button>
+        <Button
+          size="small"
+          href={prop.data.repo}
+          target="_blank"
+          rel="noopener"
+        >
+          GitHub
+        </Button>
+      </CardActions>
+    </Card>
   );
 };
 
-export default Card;
+export default MediaCard;

@@ -32,7 +32,8 @@ export const PROJECTS = [
     link: "",
     aria: "GitHub Project: Wine Recommender",
     label: "Wine Recommender",
-    description: "Nunc vitae velit consequat massa ullamcorper sodales. ",
+    description:
+      "Nunc vitae velit consequat massa ullamcorper sodales. Nunc vitae velit consequat massa ullamcorper sodales. Nunc vitae velit consequat massa ullamcorper sodales.",
     tags: ["CI", "Django", "TDD"],
   },
   {

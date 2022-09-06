@@ -65,6 +65,17 @@ export const query = graphql`
           datePublished(formatString: "MMMM D, YYYY")
           title
           slug
+          hero_image_alt
+          hero_image {
+            childImageSharp {
+              gatsbyImageData(
+                width: 400
+                height: 100
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
+            }
+          }
         }
       }
     }

@@ -1,23 +1,52 @@
-import React from "react";
-import { Link } from "gatsby";
-import * as styles from "./card.module.css";
+import * as React from "react";
+import { getImage, GatsbyImage } from "gatsby-plugin-image";
 
-const Card = (props) => {
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import { Link } from "gatsby";
+import { Box } from "@mui/material";
+
+const MediaCard = (props) => {
+  const image = getImage(props.data?.frontmatter.hero_image);
+
   return (
-    <article className={styles.card}>
-      <div className={styles.card__image}>img</div>
-      <div className={styles.card__chips}>chips</div>
-      <div className={styles.card__description}>
-        {props.data?.frontmatter.title}
-      </div>
-      <div className={styles.card__btns}>
+    <Card sx={{ width: 345, maxHeight: 400 }}>
+      <GatsbyImage image={image} alt={props.data?.frontmatter.hero_image_alt} />
+      <CardContent
+        sx={{
+          height: 250,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+        }}
+      >
+        <Box>
+          <Typography gutterBottom variant="h5" component="div">
+            {props.data?.frontmatter.title}
+          </Typography>
+        </Box>
+        <Box>
+          <Typography variant="body2" color="text.secondary">
+            Lizards are a widespread group of squamate reptiles, with over 6,000
+            species, ranging across all continents except Antarctica
+          </Typography>
+        </Box>
+        <Box>
+          <Typography gutterBottom variant="h7" component="div">
+            Published: {props.data?.frontmatter.datePublished}
+          </Typography>
+        </Box>
+      </CardContent>
+      <CardActions>
         <Link to={`/blog/${props.data?.frontmatter.slug}`}>
-          <button className={styles.card__btn}>Read More . .</button>
+          <Button size="small">Read</Button>
         </Link>
-        <p>Posted: {props.data?.frontmatter.datePublished}</p>
-      </div>
-    </article>
+      </CardActions>
+    </Card>
   );
 };
 
-export default Card;
+export default MediaCard;
