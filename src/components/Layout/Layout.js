@@ -14,7 +14,6 @@ const Layout = ({ pageTitle, children }) => {
       sx={{
         display: "flex",
         flexDirection: "column",
-        height: "100%",
         background: "black",
       }}
     >

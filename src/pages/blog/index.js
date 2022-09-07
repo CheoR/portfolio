@@ -29,7 +29,7 @@ const Blog = ({ data }) => {
 
   return (
     <Layout pageTitle="My Blog Posts">
-      <Box sx={{ height: "100%" }}>
+      <Box sx={{ height: "100vh" }}>
         <div className={styles.gallery}>
           <div className={styles.gallery__title}>
             <div>Gallery</div>

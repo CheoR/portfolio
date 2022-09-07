@@ -4,7 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 
 import Card from "./Card";
 
-import { PROJECTS } from "../data";
+import { PROJECTS } from "../../data/data";
 // import { Chip } from "./Chip";
 
 const Gallery = () => {
