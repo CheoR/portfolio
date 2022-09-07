@@ -15,10 +15,15 @@ const Layout = ({ pageTitle, children }) => {
         display: "flex",
         flexDirection: "column",
         height: "100%",
+        background: "black",
       }}
     >
       <Navbar />
-      <Container component="main" sx={{ height: "100%" }}>
+      <Container
+        component="main"
+        sx={{ height: "100%", background: "lightgreen" }}
+        mb={5}
+      >
         <h1 className={styles.heading}>
           <span>{pageTitle}</span>
         </h1>

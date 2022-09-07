@@ -4,6 +4,7 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image";
 
 import Layout from "../../components/Layout/Layout";
 import { SEO } from "../../components/SEO/SEO";
+import { Box } from "@mui/material";
 
 const BlogPost = ({ data, children }) => {
   const { frontmatter: fm } = data.mdx;
@@ -11,13 +12,15 @@ const BlogPost = ({ data, children }) => {
 
   return (
     <Layout pageTitle={fm.title}>
-      <p>{fm.datePublished}</p>
-      <GatsbyImage image={image} alt={fm.hero_image_alt} />
-      <p>
-        Photo Credit:{" "}
-        <a href={fm.hero_image_credit_link}>{fm.hero_image_credit_text}</a>
-      </p>
-      {children}
+      <Box sx={{ height: "100vh", background: "green" }}>
+        <p>{fm.datePublished}</p>
+        <GatsbyImage image={image} alt={fm.hero_image_alt} />
+        <p>
+          Photo Credit:{" "}
+          <a href={fm.hero_image_credit_link}>{fm.hero_image_credit_text}</a>
+        </p>
+        {children}
+      </Box>
     </Layout>
   );
 };

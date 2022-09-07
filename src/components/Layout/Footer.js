@@ -8,7 +8,7 @@ import { SOCIALS } from "../data";
 
 const Footer = () => {
   return (
-    <Box component="footer">
+    <Box component="footer" sx={{ background: "red" }}>
       <Grid container>
         <Grid item xs={12}>
           <Typography

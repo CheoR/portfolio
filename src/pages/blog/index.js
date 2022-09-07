@@ -6,6 +6,7 @@ import Card from "../../components/Card/Card";
 import { SEO } from "../../components/SEO/SEO";
 
 import * as styles from "../../components/Gallery/gallery.module.css";
+import { Box } from "@mui/material";
 
 const Blog = ({ data }) => {
   const BLOGS = data.allMdx.nodes;
@@ -28,28 +29,30 @@ const Blog = ({ data }) => {
 
   return (
     <Layout pageTitle="My Blog Posts">
-      <div className={styles.gallery}>
-        <div className={styles.gallery__title}>
-          <div>Gallery</div>
-          {/* <div className={styles.gallery__chipbar}>
+      <Box sx={{ height: "100%" }}>
+        <div className={styles.gallery}>
+          <div className={styles.gallery__title}>
+            <div>Gallery</div>
+            {/* <div className={styles.gallery__chipbar}>
           {CHIPS.map((chip, idx) => (
             <Chip key={idx} data={chip} />
           ))}
         </div> */}
-          <input
-            className={styles.gallery__searchbar}
-            value={inputField.value}
-            placeholder="Search . . "
-            onChange={(e) => searchItems(e.target.value)}
-          />
-        </div>
+            <input
+              className={styles.gallery__searchbar}
+              value={inputField.value}
+              placeholder="Search . . "
+              onChange={(e) => searchItems(e.target.value)}
+            />
+          </div>
 
-        <div className={styles.cards}>
-          {filteredData.map((blog) => (
-            <Card key={blog.id} data={blog} />
-          ))}
+          <div className={styles.cards}>
+            {filteredData.map((blog) => (
+              <Card key={blog.id} data={blog} />
+            ))}
+          </div>
         </div>
-      </div>
+      </Box>
     </Layout>
   );
 };

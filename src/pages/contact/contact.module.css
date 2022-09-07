@@ -7,9 +7,9 @@
   gap: 1rem;
   margin: 24px 0;
   box-shadow: 2px 2px 8px lightslategray;
-  height: 100%;
   padding: 2rem;
   max-width: 500px;
+  flex: 1;
 }
 
 .main__form__fieldset {

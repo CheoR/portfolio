@@ -25,7 +25,7 @@ const Gallery = () => {
   };
 
   return (
-    <Box sx={{ height: "100%" }}>
+    <Box sx={{ background: "pink" }}>
       <Grid container>
         <Grid item xs={12} md={10}>
           <Box
