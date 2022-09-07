@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
+import { Box, Container, Grid, TextField } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
+
 import Card from "./Card";
-import * as styles from "./gallery.module.css";
 
 import { PROJECTS } from "../data";
 // import { Chip } from "./Chip";
@@ -23,27 +25,48 @@ const Gallery = () => {
   };
 
   return (
-    <div className={styles.gallery}>
-      <div className={styles.gallery__title}>
-        <div>Gallery</div>
-        {/* <div className={styles.gallery__chipbar}>
-          {CHIPS.map((chip, idx) => (
-            <Chip key={idx} data={chip} />
-          ))}
-        </div> */}
-        <input
-          className={styles.gallery__searchbar}
-          value={inputField.value}
-          placeholder="Search . . "
-          onChange={(e) => searchItems(e.target.value)}
-        />
-      </div>
-      <div className={styles.cards}>
+    <Box sx={{ height: "100%" }}>
+      <Grid container>
+        <Grid item xs={12} md={10}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              height: "100%",
+            }}
+          >
+            Gallery
+          </Box>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={2}
+          sx={{
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <TextField
+            value={inputField.value}
+            label="Search"
+            onChange={(e) => searchItems(e.target.value)}
+          />
+          <SearchIcon />
+        </Grid>
+      </Grid>
+      <Container sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
         {filteredData.map((data, idx) => (
           <Card key={idx} data={data} />
         ))}
-      </div>
-    </div>
+      </Container>
+    </Box>
+
+    //     <div className={styles.gallery__chipbar}>
+    //       {CHIPS.map((chip, idx) => (
+    //         <Chip key={idx} data={chip} />
+    //       ))}
+    //     </div>
   );
 };
 
