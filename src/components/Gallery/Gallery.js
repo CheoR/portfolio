@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Box, Container, Grid, TextField } from "@mui/material";
+import { Box, Grid, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 import Card from "./Card";
@@ -25,7 +25,7 @@ const Gallery = () => {
   };
 
   return (
-    <Box sx={{ background: "pink" }}>
+    <Box>
       <Grid container>
         <Grid item xs={12} md={10}>
           <Box
@@ -55,11 +55,18 @@ const Gallery = () => {
           <SearchIcon />
         </Grid>
       </Grid>
-      <Container sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
+      <Grid
+        container
+        sx={{ display: "flex", justifyContent: "center" }}
+        gap={2}
+        p={1}
+      >
         {filteredData.map((data, idx) => (
-          <Card key={idx} data={data} />
+          <Grid item>
+            <Card key={idx} data={data} />
+          </Grid>
         ))}
-      </Container>
+      </Grid>
     </Box>
 
     //     <div className={styles.gallery__chipbar}>
