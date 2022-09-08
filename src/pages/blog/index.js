@@ -10,7 +10,7 @@ const Blog = ({ data }) => {
   return (
     <>
       <CssBaseline />
-      <Layout pageTitle="My Blog Posts">
+      <Layout pageTitle="Ramblings">
         <Gallery data={data} />
       </Layout>
     </>

@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <>
       <CssBaseline />
-      <Layout pageTitle="Home">
+      <Layout pageTitle="">
         <Gallery />
       </Layout>
     </>

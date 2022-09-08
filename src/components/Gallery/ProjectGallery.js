@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { Box, Grid, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
-import Card from "./Card";
+import Card from "./ProjectCard";
 import { PROJECTS } from "../../data/data";
 // import { Chip } from "./Chip";
 

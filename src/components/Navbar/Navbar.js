@@ -14,6 +14,7 @@ import MenuItem from "@mui/material/MenuItem";
 import AttractionsIcon from "@mui/icons-material/Attractions";
 
 import { Link } from "gatsby";
+
 import { PAGES } from "../../data/data";
 import avatar from "../../../assets/images/self.png";
 

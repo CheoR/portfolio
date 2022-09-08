@@ -1,12 +1,11 @@
 import * as React from "react";
 
-import { Box, Container } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 
 import Footer from "./Footer";
 import Navbar from "../Navbar/Navbar";
 
 import "../global.css";
-import * as styles from "./layout.module.css";
 
 const Layout = ({ pageTitle, children }) => {
   return (
@@ -14,19 +13,14 @@ const Layout = ({ pageTitle, children }) => {
       sx={{
         display: "flex",
         flexDirection: "column",
-        background: "black",
         minHeight: "100vh",
       }}
     >
       <Navbar />
-      <Container
-        component="main"
-        sx={{ minHeight: "100vh", background: "pink" }}
-        mb={5}
-      >
-        <h1 className={styles.heading}>
-          <span>{pageTitle}</span>
-        </h1>
+      <Box mt={10}>
+        <Typography sx={{ textAlign: "center" }}>{pageTitle}</Typography>
+      </Box>
+      <Container component="main" sx={{ minHeight: "100vh" }} mb={5}>
         {children}
       </Container>
       <Footer />

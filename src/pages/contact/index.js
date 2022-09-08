@@ -1,15 +1,12 @@
 import * as React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import CssBaseline from "@mui/material/CssBaseline";
+import { Box } from "@mui/material";
 
 import Layout from "../../components/Layout/Layout";
 import { SEO } from "../../components/SEO/SEO";
-
 import * as styles from "./contact.module.css";
-import { Box } from "@mui/material";
-
-const fsURL = process.env.GATSBY_FORMSPREE_URL;
-const fsEndpoint = process.env.GATSBY_FORMSPREE_ENDPOINT;
+import { fsURL, fsEndpoint } from "../../data/data";
 
 const ContactPage = () => {
   const [state, handleSubmit] = useForm(fsEndpoint);
@@ -24,7 +21,7 @@ const ContactPage = () => {
   return (
     <>
       <CssBaseline />
-      <Layout pageTitle="Contact">
+      <Layout pageTitle="Let's Chat!">
         <Box sx={{ height: "100%", display: "flex", justifyContent: "center" }}>
           <form
             className={styles.main__form}
