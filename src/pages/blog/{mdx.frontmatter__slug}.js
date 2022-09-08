@@ -1,6 +1,7 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
+import CssBaseline from "@mui/material/CssBaseline";
 
 import Layout from "../../components/Layout/Layout";
 import { SEO } from "../../components/SEO/SEO";
@@ -11,17 +12,20 @@ const BlogPost = ({ data, children }) => {
   const image = getImage(fm.hero_image);
 
   return (
-    <Layout pageTitle={fm.title}>
-      <Box sx={{ height: "100vh", background: "green" }}>
-        <p>{fm.datePublished}</p>
-        <GatsbyImage image={image} alt={fm.hero_image_alt} />
-        <p>
-          Photo Credit:{" "}
-          <a href={fm.hero_image_credit_link}>{fm.hero_image_credit_text}</a>
-        </p>
-        {children}
-      </Box>
-    </Layout>
+    <>
+      <CssBaseline />
+      <Layout pageTitle={fm.title}>
+        <Box sx={{ height: "100vh", background: "green" }}>
+          <GatsbyImage image={image} alt={fm.hero_image_alt} />
+          <p>
+            Photo Credit:{" "}
+            <a href={fm.hero_image_credit_link}>{fm.hero_image_credit_text}</a>
+          </p>
+          <p>{fm.datePublished}</p>
+          {children}
+        </Box>
+      </Layout>
+    </>
   );
 };
 

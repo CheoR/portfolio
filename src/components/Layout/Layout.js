@@ -14,10 +14,16 @@ const Layout = ({ pageTitle, children }) => {
       sx={{
         display: "flex",
         flexDirection: "column",
+        background: "black",
+        minHeight: "100vh",
       }}
     >
       <Navbar />
-      <Container component="main" sx={{ height: "100%" }} mb={5}>
+      <Container
+        component="main"
+        sx={{ minHeight: "100vh", background: "pink" }}
+        mb={5}
+      >
         <h1 className={styles.heading}>
           <span>{pageTitle}</span>
         </h1>

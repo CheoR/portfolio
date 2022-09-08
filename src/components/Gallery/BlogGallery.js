@@ -1,10 +1,8 @@
 import React, { useRef, useState } from "react";
 import { Box, Grid, TextField } from "@mui/material";
-// import { graphql } from "gatsby";
 import SearchIcon from "@mui/icons-material/Search";
 
 import Card from "../../components/Card/Card";
-// import * as styles from "./gallery.module.css";
 
 const BlogGallery = ({ data }) => {
   const BLOGS = data.allMdx.nodes;
@@ -69,59 +67,12 @@ const BlogGallery = ({ data }) => {
         ))}
       </Grid>
     </Box>
-    // <Box sx={{ height: "100vh" }}>
-    //   <div className={styles.gallery}>
-    //     <div className={styles.gallery__title}>
-    //       <div>Gallery</div>
+
     //       {/* <div className={styles.gallery__chipbar}>
     //       {CHIPS.map((chip, idx) => (
     //         <Chip key={idx} data={chip} />
     //       ))}
-    //     </div> */}
-    //       <input
-    //         className={styles.gallery__searchbar}
-    //         value={inputField.value}
-    //         placeholder="Search . . "
-    //         onChange={(e) => searchItems(e.target.value)}
-    //       />
-    //     </div>
-
-    //     <div className={styles.cards}>
-    //       {filteredData.map((blog) => (
-    //         <Card key={blog.id} data={blog} />
-    //       ))}
-    //     </div>
-    //   </div>
-    // </Box>
   );
 };
-
-// export const query = graphql`
-//   query {
-//     allMdx(sort: { fields: frontmatter___datePublished, order: DESC }) {
-//       nodes {
-//         id
-//         body
-//         frontmatter {
-//           author
-//           datePublished(formatString: "MMMM D, YYYY")
-//           title
-//           slug
-//           hero_image_alt
-//           hero_image {
-//             childImageSharp {
-//               gatsbyImageData(
-//                 width: 400
-//                 height: 100
-//                 placeholder: BLURRED
-//                 formats: [AUTO, WEBP, AVIF]
-//               )
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
 
 export default BlogGallery;
