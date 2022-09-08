@@ -3,11 +3,10 @@ import { Box, Grid, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 import Card from "./Card";
-
 import { PROJECTS } from "../../data/data";
 // import { Chip } from "./Chip";
 
-const Gallery = () => {
+const ProjectGallery = () => {
   const inputField = useRef();
   const [filteredData, setFilteredData] = useState(PROJECTS);
   const searchItems = (searchTerm) => {
@@ -77,4 +76,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default ProjectGallery;

@@ -1,59 +1,19 @@
-import React, { useRef, useState } from "react";
+import * as React from "react";
+import CssBaseline from "@mui/material/CssBaseline";
 import { graphql } from "gatsby";
 
 import Layout from "../../components/Layout/Layout";
-import Card from "../../components/Card/Card";
+import Gallery from "../../components/Gallery/BlogGallery";
 import { SEO } from "../../components/SEO/SEO";
 
-import * as styles from "../../components/Gallery/gallery.module.css";
-import { Box } from "@mui/material";
-
 const Blog = ({ data }) => {
-  const BLOGS = data.allMdx.nodes;
-
-  const inputField = useRef();
-  const [filteredData, setFilteredData] = useState(BLOGS);
-  const searchItems = (searchTerm) => {
-    if (!searchTerm) {
-      setFilteredData(BLOGS);
-    }
-    const filteredData = BLOGS.filter((blog) =>
-      blog.body.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    if (filteredData.length) {
-      setFilteredData(filteredData);
-    } else {
-      setFilteredData([]);
-    }
-  };
-
   return (
-    <Layout pageTitle="My Blog Posts">
-      <Box sx={{ height: "100vh" }}>
-        <div className={styles.gallery}>
-          <div className={styles.gallery__title}>
-            <div>Gallery</div>
-            {/* <div className={styles.gallery__chipbar}>
-          {CHIPS.map((chip, idx) => (
-            <Chip key={idx} data={chip} />
-          ))}
-        </div> */}
-            <input
-              className={styles.gallery__searchbar}
-              value={inputField.value}
-              placeholder="Search . . "
-              onChange={(e) => searchItems(e.target.value)}
-            />
-          </div>
-
-          <div className={styles.cards}>
-            {filteredData.map((blog) => (
-              <Card key={blog.id} data={blog} />
-            ))}
-          </div>
-        </div>
-      </Box>
-    </Layout>
+    <>
+      <CssBaseline />
+      <Layout pageTitle="My Blog Posts">
+        <Gallery data={data} />
+      </Layout>
+    </>
   );
 };
 

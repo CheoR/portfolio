@@ -2,10 +2,10 @@ import * as React from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 
 import Layout from "../components/Layout/Layout";
-import Gallery from "../components/Gallery/Gallery";
+import Gallery from "../components/Gallery/ProjectGallery";
 import { SEO } from "../components/SEO/SEO";
 
-const IndexPage = () => {
+const Home = () => {
   return (
     <>
       <CssBaseline />
@@ -16,7 +16,7 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage;
+export default Home;
 
 // eslint-disable-next-line
 export const Head = () => <SEO title="Home" description="Home Page" />;
