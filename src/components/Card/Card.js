@@ -29,13 +29,13 @@ const MediaCard = (props) => {
           </Typography>
         </Box>
         <Box>
-          <Typography variant="body2" color="text.secondary">
-            {props.data?.body}
-          </Typography>
-        </Box>
-        <Box>
           <Typography gutterBottom variant="h7" component="div">
             Published: {props.data?.frontmatter.datePublished}
+          </Typography>
+        </Box>
+        <Box sx={{ overflow: "hidden", textOverflow: "ellipsis" }}>
+          <Typography variant="body2" color="text.secondary">
+            {props.data?.body}
           </Typography>
         </Box>
       </CardContent>

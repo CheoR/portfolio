@@ -15,8 +15,15 @@ const BlogPost = ({ data, children }) => {
     <>
       <CssBaseline />
       <Layout pageTitle={fm.title}>
-        <Box sx={{ height: "100vh", background: "green" }}>
-          <GatsbyImage image={image} alt={fm.hero_image_alt} />
+        <Box sx={{ height: "100%", background: "green" }}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <GatsbyImage image={image} alt={fm.hero_image_alt} />
+          </Box>
           <p>
             Photo Credit:{" "}
             <a href={fm.hero_image_credit_link}>{fm.hero_image_credit_text}</a>
