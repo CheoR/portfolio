@@ -9,7 +9,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import { Box } from "@mui/material";
 
-const MediaCard = (props) => {
+const BlogCard = (props) => {
   const image = getImage(props.data?.frontmatter.hero_image);
 
   return (
@@ -48,4 +48,4 @@ const MediaCard = (props) => {
   );
 };
 
-export default MediaCard;
+export default BlogCard;

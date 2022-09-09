@@ -3,15 +3,19 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { graphql } from "gatsby";
 
 import Layout from "../../components/Layout/Layout";
-import Gallery from "../../components/Gallery/BlogGallery";
+import Gallery from "../../components/Gallery/Gallery";
+import Card from "../../components/Card/BlogCard";
 import { SEO } from "../../components/SEO/SEO";
+import { filterBlogs } from "../../utils/filters";
 
 const Blog = ({ data }) => {
+  const BLOGS = data.allMdx.nodes;
+
   return (
     <>
       <CssBaseline />
       <Layout pageTitle="Ramblings">
-        <Gallery data={data} />
+        <Gallery data={BLOGS} filter={filterBlogs(BLOGS)} Card={Card} />
       </Layout>
     </>
   );

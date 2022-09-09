@@ -1,5 +1,6 @@
 export const PROJECTS = [
   {
+    id: "a00d3362-b7c5-4a6d-8182-b976d454056d",
     preview: "",
     repo: "https://github.com/CheoR/shipItOut-client",
     link: "https://shipitout.herokuapp.com/",
@@ -9,6 +10,7 @@ export const PROJECTS = [
     tags: ["Django", "Heroku", "Node", "MUI", "React"],
   },
   {
+    id: "c6409e2a-8f85-4141-b6fc-1c08315ffb98",
     preview: "",
     repo: "https://github.com/CheoR/pack-it-up",
     link: "https://cr-demo--packitup.netlify.app/",
@@ -18,6 +20,7 @@ export const PROJECTS = [
     tags: ["React"],
   },
   {
+    id: "61a1783e-a60e-4aba-a412-f8dc00f5adee",
     preview: "",
     repo: "https://github.com/CheoR/BeerMe",
     link: "",
@@ -27,6 +30,7 @@ export const PROJECTS = [
     tags: ["Enzyme", "Formik", "React", "Yup"],
   },
   {
+    id: "37e42ceb-e3fc-4531-9fa4-dac1f02fa3ef",
     preview: "",
     repo: "https://github.com/CheoR/recommend_wine",
     link: "",
@@ -37,6 +41,7 @@ export const PROJECTS = [
     tags: ["CI", "Django", "TDD"],
   },
   {
+    id: "c3e4c2a5-c5cf-4c70-920f-7cdf7c246118",
     preview: "",
     repo: "https://github.com/CheoR/FreeCodeCampProjects",
     link: "",
@@ -47,6 +52,7 @@ export const PROJECTS = [
     tags: ["CSS", "HTML", "JavaScript"],
   },
   {
+    id: "de5fad68-95eb-4b5c-9d15-af576b845280",
     preview: "",
     repo: "https://codepen.io/CheoR/full/QzPJbQ",
     link: "",
@@ -57,6 +63,7 @@ export const PROJECTS = [
     tags: ["CSS", "HTML", "JavaScript"],
   },
   {
+    id: "b4376e9d-bc40-4b35-b8f6-21ee8a0be005",
     preview: "",
     repo: "https://github.com/CheoR/portfolio",
     link: "https://cheor.github.io/portfolio/",
@@ -66,6 +73,7 @@ export const PROJECTS = [
     tags: ["CSS", "Gatsby", "HTML", "JavaScript"],
   },
   {
+    id: "da802676-c191-4278-9627-59fe6214054f",
     preview: "",
     repo: "",
     link: "./assets/pdf/Cheo_Roman_Resume.pdf",
