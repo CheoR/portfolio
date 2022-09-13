@@ -3,29 +3,18 @@ import { Box, Grid, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 import useSearch from "../../utils/useSearch";
-// import { Chip } from "./Chip";
+// import ChipBar from "../ChipBar/ChipBar";
 
 const Gallery = ({ data: _data, filter, Card }) => {
   const inputField = useRef();
   const [data, setData] = useSearch(_data, filter);
-  //     <div className={styles.gallery__chipbar}>
-  //       {CHIPS.map((chip, idx) => (
-  //         <Chip key={idx} data={chip} />
-  //       ))}
-  //     </div>
+
   return (
     <Box>
       <Grid container>
         <Grid item xs={12} md={10}>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              height: "100%",
-            }}
-          >
-            Gallery
-          </Box>
+          {/* <ChipBar data={_data} /> */}
+          {""}
         </Grid>
         <Grid
           item
@@ -34,6 +23,7 @@ const Gallery = ({ data: _data, filter, Card }) => {
           sx={{
             display: "flex",
             alignItems: "center",
+            justifyContent: "right",
           }}
         >
           <TextField
@@ -46,8 +36,11 @@ const Gallery = ({ data: _data, filter, Card }) => {
       </Grid>
       <Grid
         container
-        sx={{ display: "flex", justifyContent: "center" }}
-        gap={2}
+        sx={{
+          display: "flex",
+          justifyContent: "space-evenly",
+        }}
+        gap={1}
         p={1}
       >
         {data.length > 0 ? (
