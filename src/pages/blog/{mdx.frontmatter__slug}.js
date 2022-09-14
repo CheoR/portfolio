@@ -15,7 +15,7 @@ const BlogPost = ({ data, children }) => {
     <>
       <CssBaseline />
       <Layout pageTitle={fm.title}>
-        <Box sx={{ height: "100%" }}>
+        <Box sx={{ height: "100vh" }}>
           <Box
             sx={{
               display: "flex",

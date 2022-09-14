@@ -22,7 +22,9 @@ const ContactPage = () => {
     <>
       <CssBaseline />
       <Layout pageTitle="Let's Chat!">
-        <Box sx={{ height: "100%", display: "flex", justifyContent: "center" }}>
+        <Box
+          sx={{ height: "100vh", display: "flex", justifyContent: "center" }}
+        >
           <form
             className={styles.main__form}
             id="fs-frm"
