@@ -13,7 +13,9 @@ const ContactPage = () => {
   if (state.succeeded) {
     return (
       <Layout pageTitle="Contact">
-        <p>Thanks you for your request!</p>
+        <Box>
+          <p>Thanks you for your request!</p>
+        </Box>
       </Layout>
     );
   }
@@ -22,9 +24,7 @@ const ContactPage = () => {
     <>
       <CssBaseline />
       <Layout pageTitle="Let's Chat!">
-        <Box
-          sx={{ height: "100vh", display: "flex", justifyContent: "center" }}
-        >
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
           <form
             className={styles.main__form}
             id="fs-frm"
