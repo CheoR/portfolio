@@ -14,16 +14,13 @@ const Layout = ({ pageTitle, children }) => {
       sx={{
         display: "flex",
         flexDirection: "column",
-        minHeight: "100%",
-        // height: "100vh",
-        // justifyContent: "space-between",
-        // alignItems: "stretch",
+        minHeight: "100vh",
       }}
     >
       <Grid item>
         <Navbar />
       </Grid>
-      <Grid item>
+      <Grid item sx={{ flex: 1 }}>
         <Container component="main" mb={5}>
           <Box mt={10}>
             <Typography sx={{ textAlign: "center" }}>{pageTitle}</Typography>
@@ -35,22 +32,6 @@ const Layout = ({ pageTitle, children }) => {
         <Footer />
       </Grid>
     </Grid>
-    // <Box
-    //   sx={{
-    //     display: "flex",
-    //     flexDirection: "column",
-    //     minHeight: "100%",
-    //   }}
-    // >
-    //   <Navbar />
-    //   <Box mt={10}>
-    //     <Typography sx={{ textAlign: "center" }}>{pageTitle}</Typography>
-    //   </Box>
-    //   <Container component="main" sx={{ minHeight: "100vh" }} mb={5}>
-    //     {children}
-    //   </Container>
-    //   <Footer />
-    // </Box>
   );
 };
 
