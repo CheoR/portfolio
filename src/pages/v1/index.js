@@ -38,14 +38,14 @@ import imgTS from "../../../assets/images/icons/icons8-typescript.svg";
 import imgVSCode from "../../../assets/images/icons/icons8-vscode.svg";
 import imgWebpack from "../../../assets/images/icons/icons8-webpack.svg";
 
-import "./styles/main.css";
+import * as styles from "./styles/main.module.css";
 import { Link } from "gatsby";
 
 const Index = () => {
   return (
-    <>
-      <header id="home" className="header">
-        <div className="img__container">
+    <div className={styles.v1}>
+      <header id="home" className={styles.header}>
+        <div className={styles.img__container}>
           <img
             className="image"
             src={imgSelf}
@@ -59,8 +59,8 @@ const Index = () => {
         </div>
         <h1>let's build great products together</h1>
       </header>
-      <main className="main">
-        <section className="main__content">
+      <main className={styles.main}>
+        <section className={styles.main__content}>
           <p>
             <b>Hi</b>
             My name is Cheo. I'm a Nashville-based developer.
@@ -101,12 +101,12 @@ const Index = () => {
           </p>
           <p>I look forward to collaborating with you on future endeavors.</p>
         </section>
-        <section className="projects">
+        <section className={styles.projects}>
           <h2>projects</h2>
-          <ul className="gallery">
-            <li id="project--1" className="gallery__project">
+          <ul className={styles.gallery}>
+            <li id="project--1" className={styles.gallery__project}>
               <a
-                className="gallery__project--link"
+                className={styles.gallery__project__link}
                 href="https://shipitout.herokuapp.com/"
                 aria-label="GitHub Project: Ship It Out"
                 rel="noreferrer"
@@ -115,9 +115,9 @@ const Index = () => {
                 ShipItOut
               </a>
             </li>
-            <li id="project--2" className="gallery__project">
+            <li id="project--2" className={styles.gallery__project}>
               <a
-                className="gallery__project--link"
+                className={styles.gallery__project__link}
                 href="https://github.com/CheoR/pack-it-up"
                 aria-label="GitHub Project: Pack It Up"
                 rel="noreferrer"
@@ -126,9 +126,9 @@ const Index = () => {
                 PackItUp
               </a>
             </li>
-            <li id="project--3" className="gallery__project">
+            <li id="project--3" className={styles.gallery__project}>
               <a
-                className="gallery__project--link"
+                className={styles.gallery__project__link}
                 href="https://github.com/CheoR/BeerMe"
                 aria-label="GitHub Project: Beer Me"
                 rel="noreferrer"
@@ -137,9 +137,9 @@ const Index = () => {
                 BeerMe
               </a>
             </li>
-            <li id="project--4" className="gallery__project">
+            <li id="project--4" className={styles.gallery__project}>
               <a
-                className="gallery__project--link"
+                className={styles.gallery__project__link}
                 href="https://github.com/CheoR/recommend_wine"
                 aria-label="GitHub Project: Wine Recommender"
                 rel="noreferrer"
@@ -148,9 +148,9 @@ const Index = () => {
                 Wine Recommender
               </a>
             </li>
-            <li id="project--5" className="gallery__project">
+            <li id="project--5" className={styles.gallery__project}>
               <a
-                className="gallery__project--link"
+                className={styles.gallery__project__link}
                 href="https://github.com/CheoR/FreeCodeCampProjects"
                 aria-label="GitHub Project: Free Code Camp Projects"
                 rel="noreferrer"
@@ -159,9 +159,9 @@ const Index = () => {
                 FCC Projects
               </a>
             </li>
-            <li id="project--6" className="gallery__project">
+            <li id="project--6" className={styles.gallery__project}>
               <a
-                className="gallery__project--link"
+                className={styles.gallery__project__link}
                 href="https://codepen.io/CheoR/full/QzPJbQ"
                 aria-label="GitHub Project: Code Pen Projects"
                 rel="noreferrer"
@@ -170,9 +170,9 @@ const Index = () => {
                 CodePen
               </a>
             </li>
-            <li id="project--7" className="gallery__project">
+            <li id="project--7" className={styles.gallery__project}>
               <a
-                className="gallery__project--link"
+                className={styles.gallery__project__link}
                 href="https://github.com/CheoR/portfolio"
                 aria-label="Personal Portfolio"
                 rel="noreferrer"
@@ -181,9 +181,9 @@ const Index = () => {
                 Personal Portfolio
               </a>
             </li>
-            <li id="project--8" className="gallery__project">
+            <li id="project--8" className={styles.gallery__project}>
               <a
-                className="gallery__project--link"
+                className={styles.gallery__project__link}
                 href={resume}
                 aria-label="Download Resume"
                 rel="noreferrer"
@@ -195,340 +195,340 @@ const Index = () => {
             </li>
           </ul>
           {/* <!--<h2>get in touch</h2>
-        <form className="main__form" id="fs-frm" name="simple-contact-form" accept-charset="utf-8"
-          action="https://formspree.io/f/mzbyerkv" method="POST">
-          <fieldset className="main__form__fieldset">
-            <label for="inputName">name</label>
-            <input name="inputName" id="inputName" type="text" />
-            <label for="inputEmail">email</label>
-              <input name="inputEmail" id="inputEmail" type="email" />
-            <label for="inputeEmail">
-              email
-              <input id="inputeEmail" type="email" name="_replyto" />
-            </label>
-            <label for="inputMsg">message</label>
-            <textarea name="inputMsg" id="inputMsg" required=""></textarea>
-            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission" />
-            <input type="text" name="_gotcha" className="moocow" />
-          </fieldset>
-          <input className="submit" type="submit" value="Send" />
-        </form> --> */}
+  <form className={styles.main__form" id="fs-frm" name="simple-contact-form" accept-charset="utf-8"
+    action="https://formspree.io/f/mzbyerkv" method="POST}>
+    <fieldset className={styles.main__form__fieldset}>
+      <label for="inputName}>name</label>
+      <input name="inputName" id="inputName" type="text" />
+      <label for="inputEmail}>email</label>
+        <input name="inputEmail" id="inputEmail" type="email" />
+      <label for="inputeEmail}>
+        email
+        <input id="inputeEmail" type="email" name="_replyto" />
+      </label>
+      <label for="inputMsg}>message</label>
+      <textarea name="inputMsg" id="inputMsg" required="}></textarea>
+      <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission" />
+      <input type="text" name="_gotcha" className={styles.moocow" />
+    </fieldset>
+    <input className={styles.submit" type="submit" value="Send" />
+  </form> --> */}
         </section>
       </main>
-      <footer className="info">
-        <section className="info__section">
+      <footer className={styles.info}>
+        <section className={styles.info__section}>
           <h2>technology</h2>
-          <ul className="technologies">
+          <ul className={styles.technologies}>
             {/* <!-- PROGRAMMING LANGUAGES --> */}
-            <li className="technology__item">
+            <li className={styles.technology__item}>
               <img
                 src={imgPY}
                 height={40}
                 width={40}
                 loading="lazy"
                 alt="python icon"
-                className="technology__img"
+                className={styles.technology__img}
               />
             </li>
-            <li className="technology__item">
+            <li className={styles.technology__item}>
               <img
                 src={imgTS}
                 height={40}
                 width={40}
                 loading="lazy"
                 alt="typescript icon"
-                className="technology__img"
+                className={styles.technology__img}
               />
             </li>
-            <li className="technology__item">
+            <li className={styles.technology__item}>
               <img
                 src={imgJS}
                 height={40}
                 width={40}
                 loading="lazy"
                 alt="javascript icon"
-                className="technology__img"
+                className={styles.technology__img}
               />
             </li>
 
             {/* <!-- FRONT END --> */}
-            <li className="technology__item">
+            <li className={styles.technology__item}>
               <img
                 src={imgReactNative}
                 height={40}
                 width={40}
                 loading="lazy"
                 alt="react icon"
-                className="technology__img"
+                className={styles.technology__img}
               />
             </li>
-            <li className="technology__item">
+            <li className={styles.technology__item}>
               <img
                 src={imgChromeDev}
                 height={40}
                 width={40}
                 loading="lazy"
                 alt="chrome dev icon"
-                className="technology__img"
+                className={styles.technology__img}
               />
             </li>
-            <li className="technology__item">
+            <li className={styles.technology__item}>
               <img
                 src={imgBootstrap}
                 height={40}
                 width={40}
                 loading="lazy"
                 alt="bootstrap icon"
-                className="technology__img"
+                className={styles.technology__img}
               />
             </li>
-            <li className="technology__item">
+            <li className={styles.technology__item}>
               <img
                 src={imgSASS}
                 height={40}
                 width={40}
                 loading="lazy"
                 alt="sass icon"
-                className="technology__img"
+                className={styles.technology__img}
               />
             </li>
-            <li className="technology__item">
+            <li className={styles.technology__item}>
               <img
                 src={imgCSS}
                 height={40}
                 width={40}
                 loading="lazy"
                 alt="css icon"
-                className="technology__img"
+                className={styles.technology__img}
               />
             </li>
-            <li className="technology__item">
+            <li className={styles.technology__item}>
               <img
                 src={imgHtml5}
                 height={40}
                 width={40}
                 loading="lazy"
                 alt="html5 icon"
-                className="technology__img"
+                className={styles.technology__img}
               />
             </li>
 
             {/* <!-- BACK END --> */}
-            <li className="technology__item">
+            <li className={styles.technology__item}>
               <img
                 src={imgDjango}
                 height={40}
                 width={40}
                 loading="lazy"
                 alt="django icon"
-                className="technology__img"
+                className={styles.technology__img}
               />
             </li>
-            <li className="technology__item">
+            <li className={styles.technology__item}>
               <img
                 src={imgPostgreSQL}
                 height={40}
                 width={40}
                 loading="lazy"
                 alt="postgresql icon"
-                className="technology__img"
+                className={styles.technology__img}
               />
             </li>
-            <li className="technology__item">
+            <li className={styles.technology__item}>
               <img
                 src={imgNode}
                 height={40}
                 width={40}
                 loading="lazy"
                 alt="node icon"
-                className="technology__img"
+                className={styles.technology__img}
               />
             </li>
-            <li className="technology__item">
+            <li className={styles.technology__item}>
               <img
                 src={imgNPM}
                 height={40}
                 width={40}
                 loading="lazy"
                 alt="npm icon"
-                className="technology__img"
+                className={styles.technology__img}
               />
             </li>
-            <li className="technology__item">
+            <li className={styles.technology__item}>
               <img
                 src={imgMongoDB}
                 height={40}
                 width={40}
                 loading="lazy"
                 alt="mongo icon"
-                className="technology__img"
+                className={styles.technology__img}
               />
             </li>
-            <li className="technology__item">
+            <li className={styles.technology__item}>
               <img
                 src={imgGQL}
                 height={40}
                 width={40}
                 loading="lazy"
                 alt="graphql icon"
-                className="technology__img"
+                className={styles.technology__img}
               />
             </li>
-            <li className="technology__item">
+            <li className={styles.technology__item}>
               <img
                 src={imgHeroku}
                 height={40}
                 width={40}
                 loading="lazy"
                 alt="heroku icon"
-                className="technology__img"
+                className={styles.technology__img}
               />
             </li>
 
             {/* <!-- OTHER --> */}
-            <li className="technology__item">
+            <li className={styles.technology__item}>
               <img
                 src={imgWebpack}
                 height={40}
                 width={40}
                 loading="lazy"
                 alt="webpack icon"
-                className="technology__img"
+                className={styles.technology__img}
               />
             </li>
-            <li className="technology__item">
+            <li className={styles.technology__item}>
               <img
                 src={imgGit}
                 height={40}
                 width={40}
                 loading="lazy"
                 alt="git icon"
-                className="technology__img"
+                className={styles.technology__img}
               />
             </li>
-            <li className="technology__item">
+            <li className={styles.technology__item}>
               <img
                 src={imgGitHub}
                 height={40}
                 width={40}
                 loading="lazy"
                 alt="github icon"
-                className="technology__img"
+                className={styles.technology__img}
               />
             </li>
-            <li className="technology__item">
+            <li className={styles.technology__item}>
               <img
                 src={imgSQLite}
                 height={40}
                 width={40}
                 loading="lazy"
                 alt="SQLite icon"
-                className="technology__img"
+                className={styles.technology__img}
               />
             </li>
-            <li className="technology__item">
+            <li className={styles.technology__item}>
               <img
                 src={imgVSCode}
                 height={40}
                 width={40}
                 loading="lazy"
                 alt="vscode icon"
-                className="technology__img"
+                className={styles.technology__img}
               />
             </li>
-            <li className="technology__item">
+            <li className={styles.technology__item}>
               <img
                 src={imgBabel}
                 height={40}
                 width={40}
                 loading="lazy"
                 alt="babel icon"
-                className="technology__img"
+                className={styles.technology__img}
               />
             </li>
-            <li className="technology__item">
+            <li className={styles.technology__item}>
               <img
                 src={imgFigma}
                 height={40}
                 width={40}
                 loading="lazy"
                 alt="figma icon"
-                className="technology__img"
+                className={styles.technology__img}
               />
             </li>
-            <li className="technology__item">
+            <li className={styles.technology__item}>
               <img
                 src={imgRedux}
                 height={40}
                 width={40}
                 loading="lazy"
                 alt="redux icon"
-                className="technology__img"
+                className={styles.technology__img}
               />
             </li>
           </ul>
         </section>
-        <section className="info__section">
+        <section className={styles.info__section}>
           <h2>Connect</h2>
-          <ul className="socials">
-            <li className="socials__item">
+          <ul className={styles.socials}>
+            <li className={styles.socials__item}>
               <a
-                className="socials__item--link"
+                className={styles.socials__item__link}
                 href="https://www.linkedin.com/in/cheo-roman/"
                 aria-label="LinkIn"
                 target="_blank"
                 rel="noreferrer"
               >
                 {/* <i
-                  className="fa fa-linkedin-square fa-1x"
-                  aria-hidden="true"
-                ></i> */}
+            className={styles.fa fa-linkedin-square fa-1x"
+            aria-hidden="true"
+          ></i> */}
                 <FaLinkedin />
               </a>
             </li>
-            <li className="socials__item">
+            <li className={styles.socials__item}>
               <a
-                className="socials__item--link"
+                className={styles.socials__item__link}
                 href="https://github.com/CheoR"
                 aria-label="GitHub"
                 target="_blank"
                 rel="noreferrer"
               >
-                {/* <i className="fa fa-github-square fa-1x" aria-hidden="true"></i> */}
+                {/* <i className={styles.fa fa-github-square fa-1x" aria-hidden="true}></i> */}
                 <FaGithubSquare />
               </a>
             </li>
-            <li className="socials__item">
+            <li className={styles.socials__item}>
               <a
-                className="socials__item--link"
+                className={styles.socials__item__link}
                 href="https://www.freecodecamp.org/cheor"
                 aria-label="Free Code Camp"
                 target="_blank"
                 rel="noreferrer"
               >
                 {/* <i
-                  className="fa fa-free-code-camp fa-1x"
-                  aria-hidden="true"
-                ></i> */}
+            className={styles.fa fa-free-code-camp fa-1x"
+            aria-hidden="true"
+          ></i> */}
                 <FaFreeCodeCamp />
               </a>
             </li>
-            <li className="socials__item">
+            <li className={styles.socials__item}>
               <a
-                className="socials__item--link"
+                className={styles.socials__item__link}
                 href="http://codepen.io/CheoR/"
                 aria-label="Code Pen"
                 target="_blank"
                 rel="noreferrer"
               >
-                {/* <i className="fa fa-codepen fa-1x" aria-hidden="true"></i> */}
+                {/* <i className={styles.fa fa-codepen fa-1x" aria-hidden="true}></i> */}
                 <FaCodepen />
               </a>
             </li>
           </ul>
         </section>
-        <section className="info__section">
-          <p className="info__copy">
+        <section className={styles.info__section}>
+          <p className={styles.info__copy}>
             &copy; CheoR {new Date().getFullYear().toString()}
           </p>
           <p>
@@ -541,8 +541,7 @@ const Index = () => {
           </p>
         </section>
       </footer>
-      <script type="module" src="./scripts/main.js"></script>
-    </>
+    </div>
   );
 };
 
