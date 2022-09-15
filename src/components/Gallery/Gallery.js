@@ -10,29 +10,28 @@ const Gallery = ({ data: _data, filter, Card }) => {
   const [data, setData] = useSearch(_data, filter);
 
   return (
-    <Box>
-      <Grid container>
-        <Grid item xs={12} md={10}>
-          {/* <ChipBar data={_data} /> */}
-          {""}
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          md={2}
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "right",
-          }}
-        >
-          <TextField
-            value={inputField.value}
-            label="Search"
-            onChange={(e) => setData(e.target.value)}
-          />
-          <SearchIcon />
-        </Grid>
+    <Grid>
+      <Grid item>
+        {/* <ChipBar data={_data} /> */}
+        Moocow
+      </Grid>
+      <Grid
+        item
+        sx={{
+          display: "flex",
+          alignItems: "flex-end",
+          // justifyContent: "center",
+        }}
+        px={3}
+      >
+        <TextField
+          label="Search"
+          sx={{ width: "100%", alignText: "right" }}
+          variant="standard"
+          value={inputField.value}
+          onChange={(e) => setData(e.target.value)}
+        />
+        <SearchIcon />
       </Grid>
       <Grid
         container
@@ -53,7 +52,7 @@ const Gallery = ({ data: _data, filter, Card }) => {
           <Box>Nothing Found</Box>
         )}
       </Grid>
-    </Box>
+    </Grid>
   );
 };
 
