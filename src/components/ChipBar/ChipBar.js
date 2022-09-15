@@ -20,7 +20,7 @@ const ChipBar = ({ data }) => {
       sx={{
         display: "flex",
         // alignItems: "center",
-        height: "100%",
+        // height: "100%",
         background: "red",
         justifyContent: "space-evenly",
         overflow: "auto",
