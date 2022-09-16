@@ -30,6 +30,13 @@ const ProjectCard = (props) => {
           </Typography>
         </Box>
         <Box>
+          <Box sx={{ display: "flex", gap: 1 }}>
+            {props.data?.tags.map((tag) => (
+              <Typography key={tag} variant="subtitle1">
+                #{tag}
+              </Typography>
+            ))}
+          </Box>
           <Typography variant="body2" color="text.secondary">
             {props.data.description}
           </Typography>
