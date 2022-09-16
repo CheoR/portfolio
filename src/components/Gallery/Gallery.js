@@ -1,66 +1,19 @@
 import React, { useRef, useState } from "react";
 import { Box, Chip, Grid, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import useSearch from "../../utils/useSearch";
-// import ChipBar from "../ChipBar/ChipBar";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-const Gallery = ({ data: _data, tags, filter, Card }) => {
-  const allChips = tags.map((tag, idx) => ({ key: idx, label: tag }));
+import useSearch from "../../utils/useSearch";
 
-  const [chips, setChips] = useState(allChips);
-  const addProjects = () => undefined;
-  const removeProjects = () => undefined;
-  const toggleChip = (e) => console.log("chip clicked is ", e.target);
-
+const Gallery = ({ data, chips, filterChips, filterSearch, Card }) => {
   const inputField = useRef();
-  const [data, setData] = useSearch(_data, filter);
 
   return (
     <Grid>
-      {/* <Grid item sx={{ background: "blue" }}>
-        <Box
-          sx={{
-            background: "red",
-            display: "flex",
-
-            alignItems: "center",
-            width: "100%",
-          }}
-        >
-          <ArrowBackIosNewIcon />
-          <Box
-            sx={{
-              background: "green",
-              display: "flex",
-
-              alignItems: "center",
-              width: "100%",
-              overflowX: "scroll",
-              gap: 1,
-            }}
-          >
-            {chips.map((tag) => (
-              <Chip
-                key={tag.key}
-                label={tag.label}
-                variant="outlined"
-                sx={{ background: "lightgreen" }}
-                clickable
-                onClick={toggleChip}
-              />
-            ))}
-          </Box>
-          <ArrowForwardIosIcon />
-        </Box>
-        <ChipBar data={_data} />
-      </Grid> */}
       <Grid
         item
         sx={{
@@ -74,18 +27,11 @@ const Gallery = ({ data: _data, tags, filter, Card }) => {
           sx={{ width: "100%", alignText: "right" }}
           variant="standard"
           value={inputField.value}
-          onChange={(e) => setData(e.target.value)}
+          onChange={(e) => filterSearch(e.target.value)}
         />
         <SearchIcon />
       </Grid>
-      <Grid
-        item
-        // sx={{
-        //   display: "flex",
-        //   alignItems: "flex-end",
-        // }}
-        px={3}
-      >
+      <Grid item px={3}>
         <Accordion>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
@@ -94,30 +40,26 @@ const Gallery = ({ data: _data, tags, filter, Card }) => {
           >
             <Typography>Filter By Tech</Typography>
           </AccordionSummary>
-          <AccordionDetails>
-            {/* <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
-            </Typography> */}
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "space-evenly",
-                flexWrap: "wrap",
-              }}
-            >
-              {chips.map((tag) => (
+          <AccordionDetails
+            sx={{
+              display: "flex",
+              justifyContent: "space-evenly",
+              flexWrap: "wrap",
+              gap: 1,
+            }}
+          >
+            {chips.map((chip) => {
+              return (
                 <Chip
-                  key={tag.key}
-                  label={tag.label}
+                  key={chip}
+                  label={chip}
                   variant="outlined"
-                  sx={{ background: "lightgreen" }}
-                  clickable
-                  onClick={toggleChip}
+                  sx={{ border: "2px solid rgb(25, 118, 210)" }}
+                  clickable={true}
+                  onClick={() => filterChips(chip)}
                 />
-              ))}
-            </Box>
+              );
+            })}
           </AccordionDetails>
         </Accordion>
       </Grid>
@@ -143,5 +85,100 @@ const Gallery = ({ data: _data, tags, filter, Card }) => {
     </Grid>
   );
 };
+
+// const Gallery = ({ data: _data, chips, filter, Card }) => {
+//     const inputField = useRef();
+
+//     const allChips = chips.map((tag, idx) => ({ key: idx, label: tag }));
+
+//     const [data, setData] = useSearch(_data, filter);
+//     const [chips] = useState(allChips);
+
+//     // const add = () => undefined;
+//     // const remove = () => undefined;
+//     const toggleChip = (label) => {
+//       // console.log("filtering on tag: ", label);
+//       // console.log("prevState");
+//       // console.table(data);
+//       // setData(
+//       //   (prevState) => prevState.filter((obj) => obj.chips.include(label)),
+//       //   filter
+//       // );
+//     };
+
+//     return (
+//       <Grid>
+//         <Grid
+//           item
+//           sx={{
+//             display: "flex",
+//             alignItems: "flex-end",
+//           }}
+//           px={3}
+//         >
+//           <TextField
+//             label="Search"
+//             sx={{ width: "100%", alignText: "right" }}
+//             variant="standard"
+//             value={inputField.value}
+//             onChange={(e) => setData(e.target.value)}
+//           />
+//           <SearchIcon />
+//         </Grid>
+//         <Grid item px={3}>
+//           <Accordion>
+//             <AccordionSummary
+//               expandIcon={<ExpandMoreIcon />}
+//               aria-controls="panel1a-content"
+//               id="panel1a-header"
+//             >
+//               <Typography>Filter By Tech</Typography>
+//             </AccordionSummary>
+//             <AccordionDetails
+//               sx={{
+//                 display: "flex",
+//                 justifyContent: "space-evenly",
+//                 flexWrap: "wrap",
+//                 gap: 1,
+//               }}
+//             >
+//               {chips.map((chip) => {
+//                 console.log("chip is: ", chip);
+//                 return (
+//                   <Chip
+//                     key={chip.key}
+//                     label={chip.label}
+//                     variant="outlined"
+//                     sx={{ border: "2px solid rgb(25, 118, 210)" }}
+//                     clickable={true}
+//                     onClick={() => toggleChip(chip.label)}
+//                   />
+//                 );
+//               })}
+//             </AccordionDetails>
+//           </Accordion>
+//         </Grid>
+//         <Grid
+//           container
+//           sx={{
+//             display: "flex",
+//             justifyContent: "space-evenly",
+//           }}
+//           gap={1}
+//           p={1}
+//         >
+//           {data.length > 0 ? (
+//             data.map((obj) => (
+//               <Grid item>
+//                 <Card key={obj.id} data={obj} />
+//               </Grid>
+//             ))
+//           ) : (
+//             <Box>Nothing Found</Box>
+//           )}
+//         </Grid>
+//       </Grid>
+//     );
+//   };
 
 export default Gallery;

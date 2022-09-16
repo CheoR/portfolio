@@ -1,8 +1,12 @@
 export const filterProjects = (data) => {
-  const filtered = (searchTerm) =>
+  console.log(" filterd projects data");
+  console.log(data);
+  const filtered = (searchTerm) => {
+    if (!searchTerm) return;
     data.filter((obj) =>
-      obj.description.toLowerCase().includes(searchTerm.toLowerCase())
+      obj.description.toLowerCase().includes(searchTerm?.toLowerCase())
     );
+  };
   return filtered;
 };
 

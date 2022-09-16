@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import { graphql } from "gatsby";
 
@@ -8,21 +8,40 @@ import Card from "../../components/Card/BlogCard";
 import { SEO } from "../../components/SEO/SEO";
 import { filterBlogs } from "../../utils/filters";
 
-const Blog = ({ data }) => {
-  const BLOGS = data.allMdx.nodes;
-  const tags = [
+const Blog = ({ data: _data }) => {
+  const BLOGS = _data.allMdx.nodes;
+  const [data, setData] = useState(BLOGS);
+  const chips = [
     "All",
     ...new Set(BLOGS.map((blog) => blog.frontmatter.tags).flat(1)),
   ];
+
+  const filterChips = (chip) => {
+    if (chip === "All") {
+      setData(BLOGS);
+    } else {
+      setData(() => BLOGS.filter((obj) => obj.frontmatter.tags.includes(chip)));
+    }
+  };
+
+  const filterSearch = (searchTerm) => {
+    if (!searchTerm) setData(BLOGS);
+    setData(() =>
+      BLOGS.filter((obj) =>
+        obj.body.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    );
+  };
 
   return (
     <>
       <CssBaseline />
       <Layout pageTitle="Ramblings">
         <Gallery
-          data={BLOGS}
-          tags={tags}
-          filter={filterBlogs(BLOGS)}
+          data={data}
+          chips={chips}
+          filterChips={filterChips}
+          filterSearch={filterSearch}
           Card={Card}
         />
       </Layout>

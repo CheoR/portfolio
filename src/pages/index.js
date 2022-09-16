@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 
 import Layout from "../components/Layout/Layout";
@@ -8,20 +8,39 @@ import { SEO } from "../components/SEO/SEO";
 import { PROJECTS } from "../data/data";
 import { filterProjects } from "../utils/filters";
 
+const chips = [
+  "All",
+  ...new Set(PROJECTS.map((project) => project.tags).flat(1)),
+];
+
 const Home = () => {
-  const tags = [
-    "All",
-    ...new Set(PROJECTS.map((project) => project.tags).flat(1)),
-  ];
+  const [data, setData] = useState(PROJECTS);
+  const filterChips = (chip) => {
+    if (chip === "All") {
+      setData(PROJECTS);
+    } else {
+      setData(() => PROJECTS.filter((obj) => obj.tags.includes(chip)));
+    }
+  };
+
+  const filterSearch = (searchTerm) => {
+    if (!searchTerm) setData(PROJECTS);
+    setData(() =>
+      PROJECTS.filter((obj) =>
+        obj.description.toLowerCase().includes(searchTerm?.toLowerCase())
+      )
+    );
+  };
 
   return (
     <>
       <CssBaseline />
       <Layout pageTitle="">
         <Gallery
-          data={PROJECTS}
-          tags={tags}
-          filter={filterProjects(PROJECTS)}
+          data={data}
+          chips={chips}
+          filterChips={filterChips}
+          filterSearch={filterSearch}
           Card={Card}
         />
       </Layout>
