@@ -28,6 +28,13 @@ const BlogCard = (props) => {
             {props.data?.frontmatter.title}
           </Typography>
         </Box>
+        <Box sx={{ display: "flex", gap: 1 }}>
+          {props.data?.frontmatter.tags.map((tag) => (
+            <Typography key={tag} variant="subtitle1">
+              #{tag}
+            </Typography>
+          ))}
+        </Box>
         <Box>
           <Typography gutterBottom variant="h7" component="div">
             Published: {props.data?.frontmatter.datePublished}

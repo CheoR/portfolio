@@ -5,11 +5,14 @@ import CssBaseline from "@mui/material/CssBaseline";
 
 import Layout from "../../components/Layout/Layout";
 import { SEO } from "../../components/SEO/SEO";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 const BlogPost = ({ data, children }) => {
   const { frontmatter: fm } = data.mdx;
   const image = getImage(fm.hero_image);
+
+  console.log("blog stuff");
+  console.log(fm);
 
   return (
     <>
@@ -24,11 +27,22 @@ const BlogPost = ({ data, children }) => {
           >
             <GatsbyImage image={image} alt={fm.hero_image_alt} />
           </Box>
-          <p>
-            Photo Credit:{" "}
-            <a href={fm.hero_image_credit_link}>{fm.hero_image_credit_text}</a>
-          </p>
-          <p>{fm.datePublished}</p>
+          <Box component="p" align="center">
+            <Typography variant="caption">
+              Photo Credit:{" "}
+              <a href={fm.hero_image_credit_link}>
+                {fm.hero_image_credit_text}
+              </a>
+            </Typography>
+          </Box>
+          <Box sx={{ display: "flex", gap: 1 }}>
+            {fm.tags.map((tag) => (
+              <Typography key={tag} variant="subtitle1">
+                #{tag}
+              </Typography>
+            ))}
+          </Box>
+          <Typography variant="subtitle2">{fm.datePublished}</Typography>
           {children}
         </Box>
       </Layout>
@@ -46,6 +60,7 @@ export const query = graphql`
         hero_image_alt
         hero_image_credit_link
         hero_image_credit_text
+        tags
         hero_image {
           childImageSharp {
             gatsbyImageData(

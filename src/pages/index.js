@@ -9,12 +9,18 @@ import { PROJECTS } from "../data/data";
 import { filterProjects } from "../utils/filters";
 
 const Home = () => {
+  const tags = [
+    "All",
+    ...new Set(PROJECTS.map((project) => project.tags).flat(1)),
+  ];
+
   return (
     <>
       <CssBaseline />
       <Layout pageTitle="">
         <Gallery
           data={PROJECTS}
+          tags={tags}
           filter={filterProjects(PROJECTS)}
           Card={Card}
         />

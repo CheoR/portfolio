@@ -11,16 +11,10 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-const Gallery = ({ data: _data, filter, Card }) => {
-  let allChips = [
-    "All",
-    ...new Set(_data.map((project) => project.tags).flat(1)),
-  ];
-
-  allChips = allChips.map((tag, idx) => ({ key: idx, label: tag }));
+const Gallery = ({ data: _data, tags, filter, Card }) => {
+  const allChips = tags.map((tag, idx) => ({ key: idx, label: tag }));
 
   const [chips, setChips] = useState(allChips);
-
   const addProjects = () => undefined;
   const removeProjects = () => undefined;
   const toggleChip = (e) => console.log("chip clicked is ", e.target);

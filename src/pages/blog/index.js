@@ -10,12 +10,21 @@ import { filterBlogs } from "../../utils/filters";
 
 const Blog = ({ data }) => {
   const BLOGS = data.allMdx.nodes;
+  const tags = [
+    "All",
+    ...new Set(BLOGS.map((blog) => blog.frontmatter.tags).flat(1)),
+  ];
 
   return (
     <>
       <CssBaseline />
       <Layout pageTitle="Ramblings">
-        <Gallery data={BLOGS} filter={filterBlogs(BLOGS)} Card={Card} />
+        <Gallery
+          data={BLOGS}
+          tags={tags}
+          filter={filterBlogs(BLOGS)}
+          Card={Card}
+        />
       </Layout>
     </>
   );
@@ -32,6 +41,7 @@ export const query = graphql`
           datePublished(formatString: "MMMM D, YYYY")
           title
           slug
+          tags
           hero_image_alt
           hero_image {
             childImageSharp {
