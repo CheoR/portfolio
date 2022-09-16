@@ -6,7 +6,6 @@ import Gallery from "../components/Gallery/Gallery";
 import Card from "../components/Card/ProjectCard";
 import { SEO } from "../components/SEO/SEO";
 import { PROJECTS } from "../data/data";
-import { filterProjects } from "../utils/filters";
 
 const chips = [
   "All",

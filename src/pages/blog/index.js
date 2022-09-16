@@ -6,7 +6,6 @@ import Layout from "../../components/Layout/Layout";
 import Gallery from "../../components/Gallery/Gallery";
 import Card from "../../components/Card/BlogCard";
 import { SEO } from "../../components/SEO/SEO";
-import { filterBlogs } from "../../utils/filters";
 
 const Blog = ({ data: _data }) => {
   const BLOGS = _data.allMdx.nodes;
